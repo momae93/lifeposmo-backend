@@ -1,0 +1,27 @@
+{
+  "name": "lifeposmo-backend",
+  "version": "1.0.0",
+  "description": "Life postmortem app back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint src/",
+    "lint:fix": "./node_modules/.bin/eslint src/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/momae93/lifeposmo-backend.git"
+  },
+  "author": "Mickael AU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/momae93/lifeposmo-backend/issues"
+  },
+  "homepage": "https://github.com/momae93/lifeposmo-backend#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
