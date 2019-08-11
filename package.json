@@ -18,7 +18,10 @@
     "url": "https://github.com/momae93/lifeposmo-backend/issues"
   },
   "homepage": "https://github.com/momae93/lifeposmo-backend#readme",
-  "dependencies": {},
+  "dependencies": {
+    "apollo-server": "^2.8.1",
+    "graphql": "^14.4.2"
+  },
   "devDependencies": {
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
