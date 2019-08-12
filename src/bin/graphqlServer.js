@@ -1,25 +1,29 @@
-'use strict';
+const { ApolloServer } = require('apollo-server');
+const dbServices = require('../lib/dbServices');
+const { combineResolvers, combineSchemas } = require('../lib/graphqlServices/');
 
-const { ApolloServer, gql } = require("apollo-server");
+/**
+ * Repository
+ */
+const {
+  buildRepository,
+  buildServices: buildUserServices,
+} = require('../modules/users');
 
-// The GraphQL schema
-const typeDefs = gql`
-  type Query {
-    "A simple type for getting started!"
-    hello: String
-  }
-`;
-
-// A map of functions which return data for the schema.
-const resolvers = {
-  Query: {
-    hello: () => "world"
-  }
+/**
+ * Build services by dependency injection
+ */
+const userService = buildUserServices(dbServices, buildRepository);
+const services = {
+  userService,
 };
 
+const resolvers = combineResolvers(services);
+const schemas = combineSchemas();
+
 const server = new ApolloServer({
-  typeDefs,
-  resolvers
+  typeDefs: schemas,
+  resolvers,
 });
 
 module.exports = server.listen().then(({ url }) => {
