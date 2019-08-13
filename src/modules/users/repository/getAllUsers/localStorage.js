@@ -1,8 +1,6 @@
-const { mockUsers } = require('../../__mocks__/data/');
+const { users } = require('../../__mocks__/data/');
 
 function getAllUsers() {
-  const users = mockUsers();
-
   return users;
 }
 
