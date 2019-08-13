@@ -1,5 +1,6 @@
 const defaultDbServices = require('../../../lib/dbServices');
 const getAllUsers = require('./getAllUsers');
+const getUserById = require('./getUserById');
 const defaultBuildUserRepository = require('../repository/');
 
 /**
@@ -13,6 +14,7 @@ function buildServices(
 ) {
   const services = {
     getAllUsers: getAllUsers(buildUserRepository),
+    getUserById: getUserById(buildUserRepository),
   };
 
   return services;

@@ -13,10 +13,9 @@ const getAllUsers = (userService) => () => {
  */
 const getUserById = (userService) => (parent, args) => {
   const { id } = args;
-  const users = userService.getAllUsers();
   const formattedId = parseInt(id, 10);
 
-  return users.find((user) => user.id === formattedId);
+  return userService.getUserById(formattedId);
 };
 
 /**
