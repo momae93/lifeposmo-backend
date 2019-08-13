@@ -1,10 +1,12 @@
 const { gql } = require('apollo-server');
 const User = require('./User');
-const query = require('./query');
+const queryType = require('./query');
+const mutationType = require('./mutation');
 
 const schemas = gql`
     ${User}
-    ${query}
+    ${queryType}
+    ${mutationType}
 `;
 
 module.exports = schemas;

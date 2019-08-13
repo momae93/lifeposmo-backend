@@ -1,7 +1,8 @@
 const defaultDbServices = require('../../../lib/dbServices');
+const defaultBuildUserRepository = require('../repository/');
 const getAllUsers = require('./getAllUsers');
 const getUserById = require('./getUserById');
-const defaultBuildUserRepository = require('../repository/');
+const createUser = require('./createUser');
 
 /**
  * DOMAIN level - Build user services with dependency injection
@@ -15,6 +16,7 @@ function buildServices(
   const services = {
     getAllUsers: getAllUsers(buildUserRepository),
     getUserById: getUserById(buildUserRepository),
+    createUser: createUser(buildUserRepository),
   };
 
   return services;
