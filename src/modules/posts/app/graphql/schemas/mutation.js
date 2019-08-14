@@ -2,8 +2,8 @@ const { gql } = require('apollo-server');
 
 const mutationType = gql`
   extend type Mutation {
-    createUser(firstname: String!, lastname: String!): User!
-    deleteUser(id: ID!): Boolean!
+    createPost(title: String!, description: String!, solution: String!, idAuthor: Int!): User!
+    deletePost(id: ID!): Boolean!
   }
 `;
 
