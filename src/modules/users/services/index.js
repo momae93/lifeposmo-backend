@@ -1,8 +1,10 @@
 const defaultDbServices = require('../../../lib/dbServices');
 const defaultBuildUserRepository = require('../repository/');
+
 const getAllUsers = require('./getAllUsers');
 const getUserById = require('./getUserById');
 const createUser = require('./createUser');
+const deleteUser = require('./deleteUser');
 
 /**
  * DOMAIN level - Build user services with dependency injection
@@ -17,6 +19,7 @@ function buildServices(
     getAllUsers: getAllUsers(buildUserRepository),
     getUserById: getUserById(buildUserRepository),
     createUser: createUser(buildUserRepository),
+    deleteUser: deleteUser(buildUserRepository),
   };
 
   return services;

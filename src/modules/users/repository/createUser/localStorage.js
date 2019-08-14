@@ -1,4 +1,14 @@
-const { users = [] } = require('../../__mocks__/data/');
+const { localDatabase } = require('../../__mocks__/data/');
+
+function generateIdFromList() {
+  const userIdList = localDatabase
+    .users
+    .map((user) => user.id);
+
+  const newId = userIdList.length === 0 ? 1 : Math.max(...userIdList) + 1;
+
+  return newId;
+}
 
 function domainToDataEntity(userDomainEntity) {
   const {
@@ -6,8 +16,9 @@ function domainToDataEntity(userDomainEntity) {
     lastname,
   } = userDomainEntity;
 
+  const newIdUser = generateIdFromList();
   const userDataEntity = {
-    id: 3,
+    id: newIdUser,
     firstname,
     lastname,
   };
@@ -17,7 +28,9 @@ function domainToDataEntity(userDomainEntity) {
 
 function createUser(userDomainEntity) {
   const userDataEntity = domainToDataEntity(userDomainEntity);
-  users.push(userDataEntity);
+  localDatabase
+    .users
+    .push(userDataEntity);
 
   return userDataEntity;
 }

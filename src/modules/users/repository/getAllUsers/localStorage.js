@@ -1,7 +1,7 @@
-const { users } = require('../../__mocks__/data/');
+const { localDatabase } = require('../../__mocks__/data/');
 
 function getAllUsers() {
-  return users;
+  return localDatabase.users;
 }
 
 module.exports = getAllUsers;

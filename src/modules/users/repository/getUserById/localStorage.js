@@ -1,7 +1,9 @@
-const { users = [] } = require('../../__mocks__/data/');
+const { localDatabase } = require('../../__mocks__/data/');
 
 function getUserById(id) {
-  const searchedUser = users.find((user) => user.id === id);
+  const searchedUser = localDatabase
+    .users
+    .find((user) => user.id === id);
 
   return searchedUser;
 }
