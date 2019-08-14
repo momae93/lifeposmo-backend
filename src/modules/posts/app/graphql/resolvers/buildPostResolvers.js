@@ -10,15 +10,15 @@ const getUserById = (userService) => (parent, args) => {
 };
 
 /**
-   * APP level - Builds query resolvers
+   * APP level - Builds Post resolvers
    * @param {*} postService
    */
 function buildPostsResolvers(postService, userService) {
-  const queryResolvers = {
+  const postResolvers = {
     author: getUserById(userService),
   };
 
-  return queryResolvers;
+  return postResolvers;
 }
 
 module.exports = buildPostsResolvers;

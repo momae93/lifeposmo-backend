@@ -5,6 +5,7 @@ const UserType = gql`
         id: ID!
         firstname: String!
         lastname: String!
+        postsWritten: [Post!]
     }
 `;
 

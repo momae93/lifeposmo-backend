@@ -11,7 +11,7 @@ function combineResolvers(services) {
     postService,
   } = services;
   const resolvers = [
-    buildUserResolvers(userService),
+    buildUserResolvers(userService, postService),
     buildPostResolvers(postService, userService),
   ];
 

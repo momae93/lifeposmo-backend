@@ -19,6 +19,17 @@ const getPostById = (postService) => (parent, args) => {
 };
 
 /**
+ * APP level - Returns a list of post given an author id
+ * @param {*} postService
+ */
+const getPostsByIdAuthor = (postService) => (parent, args) => {
+  const { idAuthor } = args;
+  const formattedIdAuthor = parseInt(idAuthor, 10);
+
+  return postService.getPostsByIdAuthor(formattedIdAuthor);
+};
+
+/**
  * APP level - Build query resolvers
  * @param {*} postService
  */
@@ -26,6 +37,7 @@ function buildQueryResolvers(postService) {
   const queryResolvers = {
     posts: getAllPosts(postService),
     post: getPostById(postService),
+    postsWrittenBy: getPostsByIdAuthor(postService),
   };
 
   return queryResolvers;

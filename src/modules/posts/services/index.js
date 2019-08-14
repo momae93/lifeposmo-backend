@@ -3,6 +3,7 @@ const defaultBuildPostRepository = require('../repository/');
 
 const getAllPosts = require('./getAllPosts');
 const getPostById = require('./getPostById');
+const getPostsByIdAuthor = require('./getPostsByIdAuthor');
 const createPost = require('./createPost');
 const deletePost = require('./deletePost');
 
@@ -18,6 +19,7 @@ function buildServices(
   const services = {
     getAllPosts: getAllPosts(buildPostRepository),
     getPostById: getPostById(buildPostRepository),
+    getPostsByIdAuthor: getPostsByIdAuthor(buildPostRepository),
     createUser: createPost(buildPostRepository),
     deletePost: deletePost(buildPostRepository),
   };
