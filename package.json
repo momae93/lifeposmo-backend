@@ -21,7 +21,8 @@
   "homepage": "https://github.com/momae93/lifeposmo-backend#readme",
   "dependencies": {
     "apollo-server": "^2.8.1",
-    "graphql": "^14.4.2"
+    "graphql": "^14.4.2",
+    "graphql-iso-date": "^3.6.1"
   },
   "devDependencies": {
     "eslint": "^6.1.0",

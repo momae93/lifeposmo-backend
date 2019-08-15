@@ -1,5 +1,6 @@
-const { buildResolvers: buildUserResolvers } = require('../../modules/users/');
-const { buildResolvers: buildPostResolvers } = require('../../modules/posts/');
+const customScalarResolvers = require('./customScalarResolvers');
+const { buildResolvers: buildUserResolvers } = require('../../../modules/users');
+const { buildResolvers: buildPostResolvers } = require('../../../modules/posts');
 
 /**
  * Combines all modules' resolvers
@@ -13,6 +14,7 @@ function combineResolvers(services) {
   const resolvers = [
     buildUserResolvers(userService, postService),
     buildPostResolvers(postService, userService),
+    customScalarResolvers,
   ];
 
   return resolvers;

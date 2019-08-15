@@ -12,15 +12,25 @@ function generateIdFromList() {
 
 function domainToDataEntity(userDomainEntity) {
   const {
+    username,
+    password,
     firstname,
     lastname,
+    description,
+    isMale,
+    birthdate,
   } = userDomainEntity;
 
   const newIdUser = generateIdFromList();
   const userDataEntity = {
     id: newIdUser,
+    username,
+    password,
     firstname,
     lastname,
+    description,
+    isMale,
+    birthdate,
   };
 
   return userDataEntity;
