@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[LIB][GRAPHQL][RESOLVERS] : combineResolvers should match snapshot lib graphql combineResolvers 1`] = `
+Array [
+  Object {
+    "Mutation": Object {
+      "createUser": [Function],
+      "deleteUser": [Function],
+    },
+    "Query": Object {
+      "user": [Function],
+      "users": [Function],
+    },
+    "User": Object {
+      "postsWritten": [Function],
+    },
+  },
+  Object {
+    "Mutation": Object {
+      "createPost": [Function],
+      "deletePost": [Function],
+    },
+    "Post": Object {
+      "author": [Function],
+    },
+    "Query": Object {
+      "post": [Function],
+      "posts": [Function],
+      "postsWrittenBy": [Function],
+    },
+  },
+  Object {
+    "Date": "Date",
+  },
+]
+`;

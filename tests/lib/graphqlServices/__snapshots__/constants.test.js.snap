@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[LIB][GRAPHQL] : constants should match snapshot lib graphql constants 1`] = `
+Object {
+  "SCALAR_DATE": "Date",
+}
+`;

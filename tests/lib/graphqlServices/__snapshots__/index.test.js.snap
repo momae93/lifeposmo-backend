@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[LIB][GRAPHQL] : graphql lib should match snapshot from graphql lib 1`] = `
+Object {
+  "combineResolvers": [Function],
+  "combineSchemas": [Function],
+  "constants": Object {
+    "SCALAR_DATE": "Date",
+  },
+}
+`;
