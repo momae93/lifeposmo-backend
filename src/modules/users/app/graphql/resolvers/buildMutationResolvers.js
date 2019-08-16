@@ -18,7 +18,6 @@ const deleteUser = (userService) => (parent, args) => {
   return isDeleted;
 };
 
-
 /**
    * APP level - Build mutation resolvers
    * @param {*} userService

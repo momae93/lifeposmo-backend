@@ -2,10 +2,13 @@ const { localDatabase } = require('../../__mocks__/data/');
 
 function deleteUser(id) {
   try {
-    localDatabase.users = localDatabase
-      .users
-      .filter((user) => user.id !== id);
-    return true;
+    if (localDatabase.users.find((user) => user.id === id)) {
+      localDatabase.users = localDatabase
+        .users
+        .filter((user) => user.id !== id);
+      return true;
+    }
+    throw new Error('User with id does not exist');
   } catch (error) {
     return false;
   }
