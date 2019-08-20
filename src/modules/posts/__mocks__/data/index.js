@@ -1,9 +1,9 @@
 const posts = require('./posts/posts');
-const mockPosts = require('./posts/mockPosts');
+const buildMockPosts = require('./posts/buildMockPosts');
 const localDatabase = require('./localDatabase');
 
 module.exports = {
-  mockPosts,
+  buildMockPosts,
   posts,
   localDatabase,
 };

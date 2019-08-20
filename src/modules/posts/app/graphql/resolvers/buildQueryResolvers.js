@@ -1,43 +1,43 @@
 /**
  * APP level - Returns list of posts
  */
-const getAllPosts = (postService) => () => {
-  const posts = postService.getAllPosts();
+const getAllPosts = (postServices) => () => {
+  const posts = postServices.getAllPosts();
 
   return posts;
 };
 
 /**
  * APP level - Returns a post given an id
- * @param {*} postService
+ * @param {*} postServices
  */
-const getPostById = (postService) => (parent, args) => {
+const getPostById = (postServices) => (parent, args) => {
   const { id } = args;
   const formattedId = parseInt(id, 10);
 
-  return postService.getPostById(formattedId);
+  return postServices.getPostById(formattedId);
 };
 
 /**
  * APP level - Returns a list of post given an author id
- * @param {*} postService
+ * @param {*} postServices
  */
-const getPostsByIdAuthor = (postService) => (parent, args) => {
+const getPostsByIdAuthor = (postServices) => (parent, args) => {
   const { idAuthor } = args;
   const formattedIdAuthor = parseInt(idAuthor, 10);
 
-  return postService.getPostsByIdAuthor(formattedIdAuthor);
+  return postServices.getPostsByIdAuthor(formattedIdAuthor);
 };
 
 /**
  * APP level - Build query resolvers
- * @param {*} postService
+ * @param {*} postServices
  */
-function buildQueryResolvers(postService) {
+function buildQueryResolvers(postServices) {
   const queryResolvers = {
-    posts: getAllPosts(postService),
-    post: getPostById(postService),
-    postsWrittenBy: getPostsByIdAuthor(postService),
+    posts: getAllPosts(postServices),
+    post: getPostById(postServices),
+    postsWrittenBy: getPostsByIdAuthor(postServices),
   };
 
   return queryResolvers;

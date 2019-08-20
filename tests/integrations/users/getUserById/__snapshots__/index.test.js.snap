@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][USERS] : Get user by id should success returns all fields when calling * user * with their postwritten 1`] = `
+Object {
+  "data": Object {
+    "user": Object {
+      "description": "Description of Mickael Au",
+      "firstname": "Mickael",
+      "lastname": "AU",
+      "postsWritten": Array [
+        Object {
+          "description": "This a description",
+          "id": "1",
+          "idAuthor": 1,
+          "solution": "This is a solution",
+          "title": "This is the title",
+          "totalClaps": 0,
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`[INTEGRATION][USERS] : Get user by id should success returns all fields when existing * user * with id user 1`] = `
+Object {
+  "data": Object {
+    "user": Object {
+      "birthdate": "1996-09-27",
+      "description": "Description of Mickael Au",
+      "firstname": "Mickael",
+      "id": "1",
+      "isMale": true,
+      "lastname": "AU",
+      "password": "NotSoEncryptedPwd",
+      "username": "mickaelau",
+    },
+  },
+}
+`;
+
+exports[`[INTEGRATION][USERS] : Get user by id should success returns some fields when calling * user * with id user 1`] = `
+Object {
+  "data": Object {
+    "user": Object {
+      "description": "Description of Mickael Au",
+      "firstname": "Mickael",
+      "lastname": "AU",
+    },
+  },
+}
+`;

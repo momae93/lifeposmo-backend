@@ -15,13 +15,13 @@ describe('[MODULES][USERS][SERVICES] : user services', () => {
     const userServices = buildUserServices(mockDbServices, mockBuildUserRepository);
 
     // EXPECTED
-    const expectedUserServices = {
+    const expecteduserServices = {
       createUser: expect.any(Function),
       deleteUser: expect.any(Function),
       getAllUsers: expect.any(Function),
       getUserById: expect.any(Function),
     };
 
-    expect(userServices).toMatchObject(expectedUserServices);
+    expect(userServices).toMatchObject(expecteduserServices);
   });
 });

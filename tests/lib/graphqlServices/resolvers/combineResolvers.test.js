@@ -2,11 +2,11 @@ const combineResolvers = require('../../../../src/lib/graphqlServices/resolvers/
 
 describe('[LIB][GRAPHQL][RESOLVERS] : combineResolvers', () => {
   it('should match snapshot lib graphql combineResolvers', async () => {
-    const mockUserService = {};
-    const mockPostService = {};
+    const mockUserServices = {};
+    const mockpostServices = {};
     const mockServices = {
-      mockUserService,
-      mockPostService,
+      mockUserServices,
+      mockpostServices,
     };
     const resolvers = combineResolvers(mockServices);
 

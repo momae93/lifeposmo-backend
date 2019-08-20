@@ -685,6 +685,26 @@ Array [
             "kind": "FieldDefinition",
             "name": Object {
               "kind": "Name",
+              "value": "idAuthor",
+            },
+            "type": Object {
+              "kind": "NonNullType",
+              "type": Object {
+                "kind": "NamedType",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "Int",
+                },
+              },
+            },
+          },
+          Object {
+            "arguments": Array [],
+            "description": undefined,
+            "directives": Array [],
+            "kind": "FieldDefinition",
+            "name": Object {
+              "kind": "Name",
               "value": "author",
             },
             "type": Object {
@@ -972,7 +992,7 @@ Array [
     ],
     "kind": "Document",
     "loc": Object {
-      "end": 452,
+      "end": 475,
       "start": 0,
     },
   },

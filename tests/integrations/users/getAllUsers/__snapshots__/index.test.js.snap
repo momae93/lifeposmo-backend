@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][USERS] : Get all user should success returns all fields when calling * users * with all its fields 1`] = `
+Object {
+  "data": Object {
+    "users": Array [
+      Object {
+        "birthdate": "1996-09-27",
+        "description": "Description of Mickael Au",
+        "firstname": "Mickael",
+        "id": "1",
+        "isMale": true,
+        "lastname": "AU",
+        "password": "NotSoEncryptedPwd",
+        "username": "mickaelau",
+      },
+      Object {
+        "birthdate": "1993-03-11",
+        "description": "Description of John Doe",
+        "firstname": "John",
+        "id": "2",
+        "isMale": true,
+        "lastname": "DOE",
+        "password": "NotSoEncryptedPwd",
+        "username": "johndoe",
+      },
+    ],
+  },
+}
+`;
+
+exports[`[INTEGRATION][USERS] : Get all user should success returns all fields when calling * users * with their postwritten 1`] = `
+Object {
+  "data": Object {
+    "users": Array [
+      Object {
+        "description": "Description of Mickael Au",
+        "firstname": "Mickael",
+        "lastname": "AU",
+        "postsWritten": Array [
+          Object {
+            "description": "This a description",
+            "id": "1",
+            "idAuthor": 1,
+            "solution": "This is a solution",
+            "title": "This is the title",
+            "totalClaps": 0,
+          },
+        ],
+      },
+      Object {
+        "description": "Description of John Doe",
+        "firstname": "John",
+        "lastname": "DOE",
+        "postsWritten": Array [],
+      },
+    ],
+  },
+}
+`;
+
+exports[`[INTEGRATION][USERS] : Get all user should success returns some fields when calling * users * with some of its fields 1`] = `
+Object {
+  "data": Object {
+    "users": Array [
+      Object {
+        "description": "Description of Mickael Au",
+        "firstname": "Mickael",
+        "lastname": "AU",
+      },
+      Object {
+        "description": "Description of John Doe",
+        "firstname": "John",
+        "lastname": "DOE",
+      },
+    ],
+  },
+}
+`;

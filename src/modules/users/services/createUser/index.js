@@ -26,7 +26,7 @@ function appToDomainEntity(userAppEntity) {
 
 /**
  * DOMAIN level - Create user
- * @param {*} userService
+ * @param {*} userServices
  */
 const createUser = (
   buildUserRepository = defaultBuildUserRepository,

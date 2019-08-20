@@ -1,3 +1,3 @@
-const mockUsers = require('./mockUsers');
+const mockUsers = require('./buildMockUsers');
 
 module.exports = mockUsers();

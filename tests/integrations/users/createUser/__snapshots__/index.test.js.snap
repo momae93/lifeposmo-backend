@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][USERS] : Create user should success create user and get all fields when calling * createIser * 1`] = `
+Object {
+  "data": Object {
+    "createUser": Object {
+      "birthdate": "2019-09-20",
+      "description": "Description of Basic User",
+      "firstname": "Basic",
+      "id": "3",
+      "isMale": true,
+      "lastname": "User",
+      "password": "NotSoEncryptedPwd",
+      "username": "basicUser",
+    },
+  },
+}
+`;
+
+exports[`[INTEGRATION][USERS] : Create user should success returns all fields when calling * users * with their postwritten 1`] = `
+Object {
+  "data": Object {
+    "createUser": Object {
+      "description": "Description of Basic User",
+      "firstname": "Basic",
+      "lastname": "User",
+      "postsWritten": Array [],
+    },
+  },
+}
+`;

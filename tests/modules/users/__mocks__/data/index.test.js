@@ -8,7 +8,7 @@ describe('[MODULES][USERS][__MOCKS__][DATAS] : mockData', () => {
     // EXPECTED
     const expectedMockdata = {
       localDatabase: expect.any(Object),
-      mockUsers: expect.any(Function),
+      buildMockUsers: expect.any(Function),
       users: expect.any(Array),
     };
 

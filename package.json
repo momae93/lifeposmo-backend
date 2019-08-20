@@ -4,9 +4,10 @@
   "description": "Life postmortem app back-end",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/bin/graphqlServer",
-    "test": "NODE_ENV=test node_modules/.bin/jest --passWithNoTests --runInBand --coverage",
+    "start": "nodemon ./src/bin/app",
+    "test": "NODE_ENV=test node_modules/.bin/jest --passWithNoTests --runInBand --coverage --detectOpenHandles",
     "test:watch": "NODE_ENV=test node_modules/.bin/jest --passWithNoTests --verbose --runInBand --coverage --watch",
+    "test:update": "NODE_ENV=test node_modules/.bin/jest -u --runInBand",
     "lint": "./node_modules/.bin/eslint src/",
     "lint:fix": "./node_modules/.bin/eslint src/ --fix"
   },
@@ -21,16 +22,17 @@
   },
   "homepage": "https://github.com/momae93/lifeposmo-backend#readme",
   "dependencies": {
-    "@types/jest": "^24.0.17",
+    "@types/jest": "^24.0.18",
     "apollo-server": "^2.8.1",
+    "axios": "^0.19.0",
     "graphql": "^14.4.2",
     "graphql-iso-date": "^3.6.1"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "nodemon": "^1.19.1"
   }
 }

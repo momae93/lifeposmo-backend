@@ -1,7 +1,7 @@
 const BIRTHDATE_USER_ID_ONE = new Date(1996, 8, 28);
 const BIRTHDATE_USER_ID_TWO = new Date(1993, 2, 12);
 
-const mocksUsers = () => (
+const buildMocksUsers = () => (
   [
     {
       id: 1,
@@ -26,4 +26,4 @@ const mocksUsers = () => (
   ]
 );
 
-module.exports = mocksUsers;
+module.exports = buildMocksUsers;

@@ -2,7 +2,7 @@ const defaultBuildUserRepository = require('../../repository');
 
 /**
  * DOMAIN level - Get single user by id
- * @param {*} userService
+ * @param {*} userServices
  */
 const getUserById = (
   buildUserRepository = defaultBuildUserRepository,

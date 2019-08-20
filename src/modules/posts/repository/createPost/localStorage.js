@@ -25,7 +25,7 @@ function domainToDataEntity(postDomainEntity) {
     description,
     solution,
     idAuthor,
-    totalClap: 0,
+    totalClaps: 0,
   };
 
   return postDataEntity;

@@ -1,9 +1,9 @@
 const users = require('./users/users');
-const mockUsers = require('./users/mockUsers');
+const buildMockUsers = require('./users/buildMockUsers');
 const localDatabase = require('./localDatabase');
 
 module.exports = {
-  mockUsers,
+  buildMockUsers,
   users,
   localDatabase,
 };

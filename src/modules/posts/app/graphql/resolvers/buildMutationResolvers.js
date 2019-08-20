@@ -1,8 +1,8 @@
 /**
  * APP level - Creates post
  */
-const createPost = (postService) => (parent, args) => {
-  const createdPost = postService.createUser(args);
+const createPost = (postServices) => (parent, args) => {
+  const createdPost = postServices.createUser(args);
 
   return createdPost;
 };
@@ -10,10 +10,10 @@ const createPost = (postService) => (parent, args) => {
 /**
  * APP level - Deletes post
  */
-const deletePost = (postService) => (parent, args) => {
+const deletePost = (postServices) => (parent, args) => {
   const { id } = args;
   const formattedId = parseInt(id, 10);
-  const isDeleted = postService.deletePost(formattedId);
+  const isDeleted = postServices.deletePost(formattedId);
 
   return isDeleted;
 };
@@ -21,12 +21,12 @@ const deletePost = (postService) => (parent, args) => {
 
 /**
    * APP level - Build mutation resolvers
-   * @param {*} postService
+   * @param {*} postServices
    */
-function buildMutationResolvers(postService) {
+function buildMutationResolvers(postServices) {
   const mutationResolvers = {
-    createPost: createPost(postService),
-    deletePost: deletePost(postService),
+    createPost: createPost(postServices),
+    deletePost: deletePost(postServices),
   };
 
   return mutationResolvers;

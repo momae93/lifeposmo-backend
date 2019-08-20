@@ -2,7 +2,7 @@ const defaultBuildUserRepository = require('../../repository');
 
 /**
  * DOMAIN level - Delete user by id
- * @param {*} userService
+ * @param {*} userServices
  */
 const deleteUser = (
   buildUserRepository = defaultBuildUserRepository,

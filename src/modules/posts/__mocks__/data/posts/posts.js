@@ -1,3 +1,3 @@
-const mockPosts = require('./mockPosts');
+const buildMockPosts = require('./buildMockPosts');
 
-module.exports = mockPosts();
+module.exports = buildMockPosts();

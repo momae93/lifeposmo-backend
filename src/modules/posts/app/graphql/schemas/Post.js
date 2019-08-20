@@ -7,6 +7,7 @@ const PostType = gql`
         description: String!
         solution: String!
         totalClaps: Int!
+        idAuthor: Int!
         author: User!
     }
 `;

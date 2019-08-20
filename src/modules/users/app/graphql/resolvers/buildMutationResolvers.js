@@ -1,8 +1,8 @@
 /**
  * APP level - Create user
  */
-const createUser = (userService) => (parent, args) => {
-  const createdUser = userService.createUser(args);
+const createUser = (userServices) => (parent, args) => {
+  const createdUser = userServices.createUser(args);
 
   return createdUser;
 };
@@ -10,22 +10,22 @@ const createUser = (userService) => (parent, args) => {
 /**
  * APP level - Deletes user
  */
-const deleteUser = (userService) => (parent, args) => {
+const deleteUser = (userServices) => (parent, args) => {
   const { id } = args;
   const formattedId = parseInt(id, 10);
-  const isDeleted = userService.deleteUser(formattedId);
+  const isDeleted = userServices.deleteUser(formattedId);
 
   return isDeleted;
 };
 
 /**
    * APP level - Build mutation resolvers
-   * @param {*} userService
+   * @param {*} userServices
    */
-function buildMutationResolvers(userService) {
+function buildMutationResolvers(userServices) {
   const mutationResolvers = {
-    createUser: createUser(userService),
-    deleteUser: deleteUser(userService),
+    createUser: createUser(userServices),
+    deleteUser: deleteUser(userServices),
   };
 
   return mutationResolvers;

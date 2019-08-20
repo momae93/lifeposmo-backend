@@ -8,12 +8,12 @@ const { buildResolvers: buildPostResolvers } = require('../../../modules/posts')
 
 function combineResolvers(services) {
   const {
-    userService,
-    postService,
+    userServices,
+    postServices,
   } = services;
   const resolvers = [
-    buildUserResolvers(userService, postService),
-    buildPostResolvers(postService, userService),
+    buildUserResolvers(userServices, postServices),
+    buildPostResolvers(postServices, userServices),
     customScalarResolvers,
   ];
 

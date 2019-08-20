@@ -1,31 +1,31 @@
 /**
  * APP level - Returns list of users
  */
-const getAllUsers = (userService) => () => {
-  const users = userService.getAllUsers();
+const getAllUsers = (userServices) => () => {
+  const users = userServices.getAllUsers();
 
   return users;
 };
 
 /**
  * APP level - Returns a user given an id
- * @param {*} userService
+ * @param {*} userServices
  */
-const getUserById = (userService) => (parent, args) => {
+const getUserById = (userServices) => (parent, args) => {
   const { id } = args;
   const formattedId = parseInt(id, 10);
 
-  return userService.getUserById(formattedId);
+  return userServices.getUserById(formattedId);
 };
 
 /**
  * APP level - Build query resolvers
- * @param {*} userService
+ * @param {*} userServices
  */
-function buildQueryResolvers(userService) {
+function buildQueryResolvers(userServices) {
   const queryResolvers = {
-    users: getAllUsers(userService),
-    user: getUserById(userService),
+    users: getAllUsers(userServices),
+    user: getUserById(userServices),
   };
 
   return queryResolvers;

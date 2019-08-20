@@ -195,7 +195,7 @@ describe.only('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : User resolvers', () 
       description: expect.any(String),
       solution: expect.any(String),
       idAuthor: expect.any(Number),
-      totalClap: expect.any(Number),
+      totalClaps: expect.any(Number),
     };
 
     expect(mockPostServices.getPostsByIdAuthor).toHaveBeenCalledTimes(1);

@@ -1,21 +1,21 @@
 /**
    * APP level - Returns a list of post written by a given author id
-   * @param {*} postService
+   * @param {*} postServices
    */
-const getPostsByIdAuthor = (postService) => (parent, args) => {
+const getPostsByIdAuthor = (postServices) => (parent, args) => {
   const { id: idAuthor } = parent;
   const formattedId = parseInt(idAuthor, 10);
 
-  return postService.getPostsByIdAuthor(formattedId);
+  return postServices.getPostsByIdAuthor(formattedId);
 };
 
 /**
      * APP level - Builds User resolvers
-     * @param {*} postService
+     * @param {*} postServices
      */
-function buildUsersResolvers(userService, postService) {
+function buildUsersResolvers(userServices, postServices) {
   const userResolvers = {
-    postsWritten: getPostsByIdAuthor(postService),
+    postsWritten: getPostsByIdAuthor(postServices),
   };
 
   return userResolvers;

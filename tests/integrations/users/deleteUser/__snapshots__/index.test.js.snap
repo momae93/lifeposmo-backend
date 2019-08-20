@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][USERS] : Delete user should success delete user when calling * deleteUser * 1`] = `
+Object {
+  "data": Object {
+    "deleteUser": true,
+  },
+}
+`;
