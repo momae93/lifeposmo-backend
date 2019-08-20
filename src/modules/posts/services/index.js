@@ -20,7 +20,7 @@ function buildServices(
     getAllPosts: getAllPosts(buildPostRepository),
     getPostById: getPostById(buildPostRepository),
     getPostsByIdAuthor: getPostsByIdAuthor(buildPostRepository),
-    createUser: createPost(buildPostRepository),
+    createPost: createPost(buildPostRepository),
     deletePost: deletePost(buildPostRepository),
   };
 

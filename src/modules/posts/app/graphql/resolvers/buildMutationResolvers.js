@@ -2,7 +2,7 @@
  * APP level - Creates post
  */
 const createPost = (postServices) => (parent, args) => {
-  const createdPost = postServices.createUser(args);
+  const createdPost = postServices.createPost(args);
 
   return createdPost;
 };

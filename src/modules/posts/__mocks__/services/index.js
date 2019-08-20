@@ -2,7 +2,7 @@ const buildMockFunction = (callback = () => {}) => (jest ? jest.fn(callback) : c
 
 const buildMockPostServices = (overridenCallbacks = {}) => {
   const {
-    getAllUsers: overridenGetAllPosts = () => {},
+    getAllPosts: overridenGetAllPosts = () => {},
     getPostById: overridenGetPostById = () => {},
     getPostsByIdAuthor: overridenGetPostsByIdAuthor = () => {},
     createPost: overridenCreatePost = () => {},
