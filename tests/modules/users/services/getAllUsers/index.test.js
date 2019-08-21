@@ -1,9 +1,10 @@
 const getAllUsers = require('../../../../../src/modules/users/services/getAllUsers');
-const mockUsers = require('../../../../../src/modules/users/__mocks__/data/users/users');
+const buildMockUsers = require('../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
 const buildMockUserRepository = require('../../../../../src/modules/users/__mocks__/repository');
 
 describe('[MODULES][USERS][SERVICES] : get all users', () => {
   it('should success get all users', async () => {
+    const mockUsers = buildMockUsers();
     // LOCAL MOCKS
     const mockGetAllUsers = () => (mockUsers);
     const mockUserRepository = buildMockUserRepository({ getAllUsers: mockGetAllUsers });

@@ -1,7 +1,7 @@
 const buildResolvers = require('../../../../../../src/modules/posts/app/graphql/resolvers/');
 const buildMockUserServices = require('../../../../../../src/modules/users/__mocks__/services/');
 const buildMockPostServices = require('../../../../../../src/modules/posts/__mocks__/services/');
-const mockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/users');
+const buildMockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
 const mockBasicPost = require('../../../../../../src/modules/posts/__mocks__/data/posts/basicPost');
 const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
 
@@ -161,6 +161,7 @@ describe('[MODULES][POSTS][APP][GRAPHQL - RESOLVERS] : Post resolvers', () => {
   it('should success call * author *', () => {
     // LOCAL MOCKS
     const idAuthor = 1;
+    const mockUsers = buildMockUsers();
     const mockGetUserById = (id) => (
       mockUsers.find((user) => user.id === id)
     );

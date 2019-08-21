@@ -1,5 +1,5 @@
 const getUserByIdLocalStorage = require('../../../../../src/modules/users/repository/getUserById/localStorage');
-const mockUsers = require('../../../../../src/modules/users/__mocks__/data/users/users');
+const localDatabase = require('../../../../../src/modules/users/__mocks__/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : get user by id', () => {
   it('should get all users from local storage', async () => {
@@ -10,7 +10,9 @@ describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : get user by id', () => {
     const foundUser = getUserByIdLocalStorage(idUser);
 
     // EXPECTED
-    const expectedUser = mockUsers.find((user) => user.id === idUser);
+    const expectedUser = localDatabase
+      .users
+      .find((user) => user.id === idUser);
 
     expect(foundUser).toMatchObject(expectedUser);
   });

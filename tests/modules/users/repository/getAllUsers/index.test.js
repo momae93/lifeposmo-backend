@@ -1,5 +1,5 @@
 const getAllUsers = require('../../../../../src/modules/users/repository/getAllUsers');
-const mockUsers = require('../../../../../src/modules/users/__mocks__/data/users/users');
+const localDatabase = require('../../../../../src/modules/users/__mocks__/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY] : get all users', () => {
   it('should get all users', async () => {
@@ -7,7 +7,7 @@ describe('[MODULES][USERS][REPOSITORY] : get all users', () => {
     const users = getAllUsers()();
 
     // EXPECTED
-    const expectedUsers = mockUsers;
+    const expectedUsers = localDatabase.users;
 
     expect(users).toMatchObject(expectedUsers);
   });

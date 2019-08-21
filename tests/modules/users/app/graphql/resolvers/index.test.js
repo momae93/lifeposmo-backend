@@ -1,7 +1,7 @@
 const buildResolvers = require('../../../../../../src/modules/users/app/graphql/resolvers/');
 const buildMockUserServices = require('../../../../../../src/modules/users/__mocks__/services/');
 const buildMockPostServices = require('../../../../../../src/modules/posts/__mocks__/services/');
-const mockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/users');
+const buildMockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
 const mockBasicUser = require('../../../../../../src/modules/users/__mocks__/data/users/basicUser');
 const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
 
@@ -28,6 +28,7 @@ describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : buildResolvers', () => {
 describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : Query resolvers', () => {
   it('should success call * users *', () => {
     // LOCAL MOCKS
+    const mockUsers = buildMockUsers();
     const mockGetAllUsers = () => (mockUsers);
     const mockPostServices = buildMockPostServices();
     const mockUserServices = buildMockUserServices({ getAllUsers: mockGetAllUsers });
@@ -57,6 +58,7 @@ describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : Query resolvers', () => {
   it('should success call * user *', () => {
     // LOCAL MOCKS
     const idUser = 1;
+    const mockUsers = buildMockUsers();
     const mockGetUserById = (id) => mockUsers.find((user) => user.id === id);
     const mockPostServices = buildMockPostServices();
     const mockUserServices = buildMockUserServices({ getUserById: mockGetUserById });
@@ -164,7 +166,7 @@ describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : Mutation resolvers', () =
   });
 });
 
-describe.only('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : User resolvers', () => {
+describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : User resolvers', () => {
   it('should success call * postsWritten *', () => {
     // LOCAL MOCKS
     const idAuthor = 1;

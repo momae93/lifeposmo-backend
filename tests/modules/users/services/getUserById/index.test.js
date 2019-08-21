@@ -1,12 +1,14 @@
 const getUserById = require('../../../../../src/modules/users/services/getUserById');
-const mockUsers = require('../../../../../src/modules/users/__mocks__/data/users/users');
+const buildMockUsers = require('../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
 const buildMockUserRepository = require('../../../../../src/modules/users/__mocks__/repository');
 
 describe('[MODULES][USERS][SERVICES] : get user by id user', () => {
   it('should success returns a user from an id', async () => {
     // LOCAL MOCKS
     const idUserToBeGet = 1;
-    const mockGetUserById = (idUser) => mockUsers.find((user) => user.id === idUser);
+    const mockUsers = buildMockUsers();
+    const mockGetUserById = (idUser) => mockUsers
+      .find((user) => user.id === idUser);
     const mockUserRepository = buildMockUserRepository({ getUserById: mockGetUserById });
     const mockBuildUserRepository = () => (mockUserRepository);
 

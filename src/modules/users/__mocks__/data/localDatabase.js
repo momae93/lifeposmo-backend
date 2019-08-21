@@ -1,4 +1,6 @@
-const users = require('./users/users');
+const buildMockUsers = require('./users/buildMockUsers');
+
+const users = buildMockUsers();
 
 const localDatabase = {
   users,
