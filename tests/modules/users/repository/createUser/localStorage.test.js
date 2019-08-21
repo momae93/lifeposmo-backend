@@ -1,44 +1,36 @@
-const deleteUserLocalStorage = require('../../../../../src/modules/users/repository/deleteUser/localStorage');
+const createUserLocalStorage = require('../../../../../src/modules/users/repository/createUser/localStorage');
 const localDatabase = require('../../../../../src/modules/users/__mocks__/data/localDatabase');
+const basicUser = require('../../../../../src/modules/users/__mocks__/data/users/basicUser');
 
-describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : delete user from user id', () => {
-  it('should success delete an user from an user id from local storage', async () => {
+describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : create user', () => {
+  it('should success create an user', async () => {
     // LOCAL MOCKS
-    const idUser = 1;
+    const userDomainEntity = basicUser;
 
     // FUNCTION TESTED
-    const usersBeforeDeletion = localDatabase.users;
-    const isDeleted = deleteUserLocalStorage(idUser);
-    const usersAfterDeletion = localDatabase.users;
+    const usersBeforeCreation = [...localDatabase.users];
+    const createdUser = createUserLocalStorage(userDomainEntity);
+    const usersAfterCreation = [...localDatabase.users];
 
     // EXPECTED
-    const deletedUser = localDatabase
-      .users
-      .find((user) => user.id === idUser);
+    const expectedCreatedUser = {
+      id: 3,
+      ...basicUser,
+    };
 
-    expect(isDeleted).toBe(true);
-    expect(deletedUser).toBeUndefined();
-    expect(usersAfterDeletion.length).toBe(usersBeforeDeletion.length - 1);
-    expect(usersBeforeDeletion).not.toMatchObject(usersAfterDeletion);
-  });
+    const expectedUserCreatedSchema = {
+      id: expect.any(Number),
+      firstname: expect.any(String),
+      lastname: expect.any(String),
+      username: expect.any(String),
+      description: expect.any(String),
+      birthdate: expect.any(Date),
+      password: expect.any(String),
+      isMale: expect.any(Boolean),
+    };
 
-  it('should fail delete an user from an user id from local storage', async () => {
-    // LOCAL MOCKS
-    const idUser = 88888888;
-
-    // FUNCTION TESTED
-    const usersBeforeDeletion = localDatabase.users;
-    const isDeleted = deleteUserLocalStorage(idUser);
-    const usersAfterDeletion = localDatabase.users;
-
-    // EXPECTED
-    const deletedUser = localDatabase
-      .users
-      .find((user) => user.id === idUser);
-
-    expect(isDeleted).toBe(false);
-    expect(deletedUser).toBeUndefined();
-    expect(usersAfterDeletion.length).toBe(usersBeforeDeletion.length);
-    expect(usersBeforeDeletion).toMatchObject(usersAfterDeletion);
+    expect(usersAfterCreation.length).toBe(usersBeforeCreation.length + 1);
+    expect(createdUser).toMatchObject(expectedCreatedUser);
+    expect(createdUser).toMatchObject(expectedUserCreatedSchema);
   });
 });

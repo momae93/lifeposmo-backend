@@ -1,5 +1,5 @@
 const buildMockUsers = require('./users/buildMockUsers');
-const buildMockFavoriteUsers = require('./users/buildMockFavoriteUsers');
+const buildMockFavoriteUsers = require('./favoriteUsers/buildMockFavoriteUsers');
 
 const users = buildMockUsers();
 const favoriteUsers = buildMockFavoriteUsers();

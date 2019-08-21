@@ -3,9 +3,9 @@ const localStorageStrategy = require('./localStorage');
 
 const createUser = () => (userDomainEntity) => {
   const isLocalStrategy = true;
-  const users = isLocalStrategy ? localStorageStrategy(userDomainEntity) : dbStrategy();
+  const user = isLocalStrategy ? localStorageStrategy(userDomainEntity) : dbStrategy();
 
-  return users;
+  return user;
 };
 
 module.exports = createUser;

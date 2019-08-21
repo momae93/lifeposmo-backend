@@ -2,7 +2,7 @@ const createUser = require('../../../../../src/modules/users/repository/createUs
 const localDatabase = require('../../../../../src/modules/users/__mocks__/data/localDatabase');
 const basicUser = require('../../../../../src/modules/users/__mocks__/data/users/basicUser');
 
-describe('[MODULES][USERS][REPOSITORY] : create user from user id', () => {
+describe('[MODULES][USERS][REPOSITORY] : create user', () => {
   it('should success create an user', async () => {
     // LOCAL MOCKS
     const userDomainEntity = basicUser;
