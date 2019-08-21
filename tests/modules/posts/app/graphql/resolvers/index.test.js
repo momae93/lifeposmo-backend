@@ -2,7 +2,6 @@ const buildResolvers = require('../../../../../../src/modules/posts/app/graphql/
 const buildMockUserServices = require('../../../../../../src/modules/users/__mocks__/services/');
 const buildMockPostServices = require('../../../../../../src/modules/posts/__mocks__/services/');
 const mockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/users');
-const mockBasicUser = require('../../../../../../src/modules/users/__mocks__/data/users/basicUser');
 const mockBasicPost = require('../../../../../../src/modules/posts/__mocks__/data/posts/basicPost');
 const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
 

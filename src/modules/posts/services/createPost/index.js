@@ -6,6 +6,7 @@ function appToDomainEntity(postAppEntity) {
     description,
     solution,
     idAuthor,
+    totalClaps,
   } = postAppEntity;
 
   const postDomainEntity = {
@@ -13,6 +14,7 @@ function appToDomainEntity(postAppEntity) {
     description,
     solution,
     idAuthor,
+    totalClaps,
   };
 
   return postDomainEntity;
