@@ -1,2 +1,3 @@
 # lifeposmo-backend
-Life postmortem app back-end
+
+Check the code on the branch graphql-ddd
