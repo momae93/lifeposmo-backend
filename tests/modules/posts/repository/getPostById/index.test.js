@@ -2,7 +2,7 @@ const getPostById = require('../../../../../src/modules/posts/repository/getPost
 const mockPosts = require('../../../../../src/modules/posts/__mocks__/data/posts/posts');
 
 describe('[MODULES][POSTS][REPOSITORY] : get by post id', () => {
-  it('should get a pots given a user id', async () => {
+  it('should get a pots given a post id', async () => {
     // LOCAL MOCKS
     const idPost = 1;
 

@@ -1,6 +1,6 @@
 const getAllPosts = require('./getAllPosts');
 const getPostById = require('./getPostById');
-const getPostsByIdAuthor = require('./getPostsByIdAuthor.js');
+const getPostsByIdAuthor = require('./getPostsByIdAuthor');
 const createPost = require('./createPost');
 const deletePost = require('./deletePost');
 
