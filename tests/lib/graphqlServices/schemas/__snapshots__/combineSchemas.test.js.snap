@@ -935,7 +935,7 @@ Array [
                 "kind": "NamedType",
                 "name": Object {
                   "kind": "Name",
-                  "value": "User",
+                  "value": "Post",
                 },
               },
             },

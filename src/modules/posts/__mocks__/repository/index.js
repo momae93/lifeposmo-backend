@@ -9,7 +9,7 @@ const buildMockPostServices = (overridenCallbacks = {}) => {
     deletePost: overridenDeletePost = () => {},
   } = overridenCallbacks;
 
-  const mockpostServices = {
+  const mockPostServices = {
     getAllPosts: buildMockFunction(overridenGetAllPosts),
     getPostById: buildMockFunction(overridenGetPostById),
     getPostsByIdAuthor: buildMockFunction(overridenGetPostsByIdAuthor),
@@ -17,7 +17,7 @@ const buildMockPostServices = (overridenCallbacks = {}) => {
     deletePost: buildMockFunction(overridenDeletePost),
   };
 
-  return mockpostServices;
+  return mockPostServices;
 };
 
 module.exports = buildMockPostServices;

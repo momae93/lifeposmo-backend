@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][POSTS] : Get all posts should success returns all fields when calling * posts * with all its fields 1`] = `
+Object {
+  "data": Object {
+    "posts": Array [
+      Object {
+        "description": "This a description",
+        "id": "1",
+        "idAuthor": 1,
+        "solution": "This is a solution",
+        "title": "This is the title",
+        "totalClaps": 0,
+      },
+    ],
+  },
+}
+`;
+
+exports[`[INTEGRATION][POSTS] : Get all posts should success returns all fields when calling * posts * with their author 1`] = `
+Object {
+  "data": Object {
+    "posts": Array [
+      Object {
+        "author": Object {
+          "birthdate": "1996-09-27",
+          "description": "Description of Mickael Au",
+          "firstname": "Mickael",
+          "id": "1",
+          "isMale": true,
+          "lastname": "AU",
+          "username": "mickaelau",
+        },
+        "title": "This is the title",
+        "totalClaps": 0,
+      },
+    ],
+  },
+}
+`;
+
+exports[`[INTEGRATION][POSTS] : Get all posts should success returns some fields when calling * posts * with some of its fields 1`] = `
+Object {
+  "data": Object {
+    "posts": Array [
+      Object {
+        "title": "This is the title",
+        "totalClaps": 0,
+      },
+    ],
+  },
+}
+`;

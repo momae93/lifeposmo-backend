@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][POSTS] : Delete post should success delete post when calling * deletePost * 1`] = `
+Object {
+  "data": Object {
+    "deletePost": true,
+  },
+}
+`;

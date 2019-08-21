@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][POSTS] : Get post by id should success returns all fields when calling * post * with their author 1`] = `
+Object {
+  "data": Object {
+    "post": Object {
+      "author": Object {
+        "birthdate": "1996-09-27",
+        "description": "Description of Mickael Au",
+        "firstname": "Mickael",
+        "id": "1",
+        "isMale": true,
+        "lastname": "AU",
+        "username": "mickaelau",
+      },
+      "title": "This is the title",
+      "totalClaps": 0,
+    },
+  },
+}
+`;
+
+exports[`[INTEGRATION][POSTS] : Get post by id should success returns all fields when existing * post * with id post 1`] = `
+Object {
+  "data": Object {
+    "post": Object {
+      "description": "This a description",
+      "id": "1",
+      "idAuthor": 1,
+      "solution": "This is a solution",
+      "title": "This is the title",
+      "totalClaps": 0,
+    },
+  },
+}
+`;
+
+exports[`[INTEGRATION][POSTS] : Get post by id should success returns some fields when calling * post * with id post 1`] = `
+Object {
+  "data": Object {
+    "post": Object {
+      "title": "This is the title",
+      "totalClaps": 0,
+    },
+  },
+}
+`;

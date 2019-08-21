@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][POSTS] : Create post should success create post and get all fields and author when calling * createPost * 1`] = `
+Object {
+  "data": null,
+  "errors": Array [
+    Object {
+      "extensions": Object {
+        "code": "INTERNAL_SERVER_ERROR",
+      },
+      "locations": Array [
+        Object {
+          "column": 13,
+          "line": 14,
+        },
+      ],
+      "message": "Cannot return null for non-nullable field Post.totalClaps.",
+      "path": Array [
+        "createPost",
+        "totalClaps",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`[INTEGRATION][POSTS] : Create post should success create post and get all fields when calling * createPost * 1`] = `
+Object {
+  "data": null,
+  "errors": Array [
+    Object {
+      "extensions": Object {
+        "code": "INTERNAL_SERVER_ERROR",
+      },
+      "locations": Array [
+        Object {
+          "column": 13,
+          "line": 14,
+        },
+      ],
+      "message": "Cannot return null for non-nullable field Post.totalClaps.",
+      "path": Array [
+        "createPost",
+        "totalClaps",
+      ],
+    },
+  ],
+}
+`;
