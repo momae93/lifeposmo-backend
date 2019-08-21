@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[MODULES][USERS][__MOCKS__][DATAS] : mockData should returns an object containing mocked datas 1`] = `
+Object {
+  "buildMockFavoriteUsers": [Function],
+  "buildMockUsers": [Function],
+  "localDatabase": Object {
+    "favoriteUsers": Array [
+      Object {
+        "id": 1,
+        "idUser": 1,
+        "idUserFavorite": 2,
+      },
+    ],
+    "users": Array [
+      Object {
+        "birthdate": 1996-09-27T22:00:00.000Z,
+        "description": "Description of Mickael Au",
+        "firstname": "Mickael",
+        "id": 1,
+        "isMale": true,
+        "lastname": "AU",
+        "password": "NotSoEncryptedPwd",
+        "username": "mickaelau",
+      },
+      Object {
+        "birthdate": 1993-03-11T23:00:00.000Z,
+        "description": "Description of John Doe",
+        "firstname": "John",
+        "id": 2,
+        "isMale": true,
+        "lastname": "DOE",
+        "password": "NotSoEncryptedPwd",
+        "username": "johndoe",
+      },
+    ],
+  },
+}
+`;

@@ -11,8 +11,11 @@ describe('[MODULES][USERS][__MOCKS__][REPOSITORY] : mockRepository', () => {
       getUserById: expect.any(Function),
       deleteUser: expect.any(Function),
       createUser: expect.any(Function),
+      createFavoriteUser: expect.any(Function),
+      deleteFavoriteUser: expect.any(Function),
     };
 
+    expect(mockRepository).toMatchSnapshot();
     expect(mockRepository).toMatchObject(expectedMockRepository);
   });
 });

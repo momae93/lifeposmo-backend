@@ -9,8 +9,10 @@ describe('[MODULES][USERS][__MOCKS__][DATAS] : mockData', () => {
     const expectedMockdata = {
       localDatabase: expect.any(Object),
       buildMockUsers: expect.any(Function),
+      buildMockFavoriteUsers: expect.any(Function),
     };
 
+    expect(mockData).toMatchSnapshot();
     expect(mockData).toMatchObject(expectedMockdata);
   });
 });

@@ -6,16 +6,20 @@ const buildMockUserServices = (overridenCallbacks = {}) => {
     getUserById: overridenGetUserById = () => {},
     deleteUser: overridenDeleteUser = () => {},
     createUser: overridenCreateUser = () => {},
+    followUser: overridenFollowUser = () => {},
+    unfollowUser: overridenUnfollowUser = () => {},
   } = overridenCallbacks;
 
-  const mockUserRepository = {
+  const mockUserServices = {
     getAllUsers: buildMockFunction(overridenGetAllUsers),
     getUserById: buildMockFunction(overridenGetUserById),
     deleteUser: buildMockFunction(overridenDeleteUser),
     createUser: buildMockFunction(overridenCreateUser),
+    followUser: buildMockFunction(overridenFollowUser),
+    unfollowUser: buildMockFunction(overridenUnfollowUser),
   };
 
-  return mockUserRepository;
+  return mockUserServices;
 };
 
 module.exports = buildMockUserServices;

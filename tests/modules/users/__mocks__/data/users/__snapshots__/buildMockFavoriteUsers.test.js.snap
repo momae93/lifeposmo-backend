@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[MODULES][USERS][__MOCKS__][DATAS] : mock favorite Users should match snapshot mock favorite users 1`] = `
+Array [
+  Object {
+    "id": 1,
+    "idUser": 1,
+    "idUserFavorite": 2,
+  },
+]
+`;

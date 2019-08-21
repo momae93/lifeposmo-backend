@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[MODULES][USERS][__MOCKS__][REPOSITORY] : mockRepository should returns an object containing mocked repository 1`] = `
+Object {
+  "createFavoriteUser": [MockFunction],
+  "createUser": [MockFunction],
+  "deleteFavoriteUser": [MockFunction],
+  "deleteUser": [MockFunction],
+  "getAllUsers": [MockFunction],
+  "getUserById": [MockFunction],
+}
+`;

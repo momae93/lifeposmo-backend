@@ -1,7 +1,7 @@
 const buildMockServices = require('../../../../../src/modules/users/__mocks__/services');
 
-describe('[MODULES][USERS][__MOCKS__][REPOSITORY] : mockRepository', () => {
-  it('should returns an object containing mocked repository', async () => {
+describe('[MODULES][USERS][__MOCKS__][SERVICES] : mockServices', () => {
+  it('should returns an object containing mocked services', async () => {
     // FUNCTION TESTED
     const mockServices = buildMockServices();
 
@@ -11,8 +11,11 @@ describe('[MODULES][USERS][__MOCKS__][REPOSITORY] : mockRepository', () => {
       getUserById: expect.any(Function),
       deleteUser: expect.any(Function),
       createUser: expect.any(Function),
+      followUser: expect.any(Function),
+      unfollowUser: expect.any(Function),
     };
 
+    expect(mockServices).toMatchSnapshot();
     expect(mockServices).toMatchObject(expectedMockServices);
   });
 });

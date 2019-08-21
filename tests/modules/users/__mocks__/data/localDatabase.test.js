@@ -8,8 +8,10 @@ describe('[MODULES][USERS][__MOCKS__][DATAS] : mockData', () => {
     // EXPECTED
     const expectedMockLocalDatabase = {
       users: expect.any(Array),
+      favoriteUsers: expect.any(Array),
     };
 
+    expect(mockLocalDatabase).toMatchSnapshot();
     expect(mockLocalDatabase).toMatchObject(expectedMockLocalDatabase);
   });
 });

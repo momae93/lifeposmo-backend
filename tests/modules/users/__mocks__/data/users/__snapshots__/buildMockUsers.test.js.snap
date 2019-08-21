@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[MODULES][USERS][__MOCKS__][DATAS] : mock Users should match snapshot mock users 1`] = `
+Array [
+  Object {
+    "birthdate": 1996-09-27T22:00:00.000Z,
+    "description": "Description of Mickael Au",
+    "firstname": "Mickael",
+    "id": 1,
+    "isMale": true,
+    "lastname": "AU",
+    "password": "NotSoEncryptedPwd",
+    "username": "mickaelau",
+  },
+  Object {
+    "birthdate": 1993-03-11T23:00:00.000Z,
+    "description": "Description of John Doe",
+    "firstname": "John",
+    "id": 2,
+    "isMale": true,
+    "lastname": "DOE",
+    "password": "NotSoEncryptedPwd",
+    "username": "johndoe",
+  },
+]
+`;
