@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][USERS] : Unfollow user should success unfollow user when calling * unfollowUser * 1`] = `
+Object {
+  "data": Object {
+    "unfollowUser": true,
+  },
+}
+`;

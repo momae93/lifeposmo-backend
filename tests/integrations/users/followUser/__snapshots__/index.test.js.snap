@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[INTEGRATION][USERS] : Follow user should success follow user and get all fields when calling * followUser * 1`] = `
+Object {
+  "data": Object {
+    "followUser": Object {
+      "id": "2",
+    },
+  },
+}
+`;

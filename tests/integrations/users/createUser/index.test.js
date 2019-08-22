@@ -27,7 +27,7 @@ describe('[INTEGRATION][USERS] : Create user', () => {
           id: newId,
           ...userEntity,
         };
-        mockDatabase.users.push({ id: 3, ...userEntity });
+        mockDatabase.users.push({ id: newId, ...userEntity });
 
         return createdUser;
       },
@@ -62,7 +62,7 @@ describe('[INTEGRATION][USERS] : Create user', () => {
     await server.stop(done);
   });
 
-  it('should success create user and get all fields when calling * createIser *', async () => {
+  it('should success create user and get all fields when calling * createUser *', async () => {
     // QUERY
     const CREATE_USER_REQUEST = `
       mutation {

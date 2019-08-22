@@ -5,10 +5,11 @@ const { buildGraphqlServer } = require('../../../../src/bin/servers/index');
 const { buildServices: buildUserServices } = require('../../../../src/modules/users');
 const { buildServices: buildPostServices } = require('../../../../src/modules/posts');
 const { URL_GRAPHQL_API_TEST_INTEGRATION } = require('../../constants');
+const basicFavoriteUser = require('../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
 const buildMockUserRepository = require('../../../../src/modules/users/__mocks__/repository');
 const buildMockPostRepository = require('../../../../src/modules/posts/__mocks__/repository');
 
-describe('[INTEGRATION][USERS] : Delete user', () => {
+describe('[INTEGRATION][USERS] : Follow user', () => {
   let server = null;
   let mockDatabase = null;
 
@@ -16,17 +17,22 @@ describe('[INTEGRATION][USERS] : Delete user', () => {
     // LOCAL MOCKS
     const mockDbServices = {};
     const mockUserRepository = buildMockUserRepository({
-      deleteUser: (id) => {
-        mockDatabase.users.filter((user) => user.id !== id);
+      createFavoriteUser: (favoriteUserEntity) => {
+        const maxId = Math.max(...mockDatabase
+          .favoriteUsers
+          .map((favoriteUser) => favoriteUser.id)) || 0;
 
-        return true;
+        const newId = maxId + 1;
+        const createdFavoriteUser = {
+          id: newId,
+          ...favoriteUserEntity,
+        };
+        mockDatabase.favoriteUsers.push({ id: newId, ...favoriteUserEntity });
+
+        return createdFavoriteUser;
       },
     });
-    const mockPostRepository = buildMockPostRepository({
-      getPostsByIdAuthor: (idAuthor) => (mockDatabase
-        .posts
-        .filter((posts) => posts.idAuthor === idAuthor)),
-    });
+    const mockPostRepository = buildMockPostRepository();
     const mockBuildUserRepository = () => (mockUserRepository);
     const mockBuildPostRepository = () => (mockPostRepository);
     const userServices = buildUserServices(mockDbServices, mockBuildUserRepository);
@@ -52,20 +58,22 @@ describe('[INTEGRATION][USERS] : Delete user', () => {
     await server.stop(done);
   });
 
-  it('should success delete user when calling * deleteUser *', async () => {
+  it('should success follow user and get all fields when calling * followUser *', async () => {
     // QUERY
-    const idToDelete = 1;
-    const DELETE_USER_REQUEST = `
+    const FOLLOW_USER_REQUEST = `
       mutation {
-        deleteUser(
-          id: ${idToDelete},
-        )
+        followUser(
+          idUser: "${basicFavoriteUser.idUser}",
+          idFavoriteUser: "${basicFavoriteUser.idFavoriteUser}",
+        ) {
+            id
+        }
       }
     `;
 
-    const { data: deletedUser } = await axios
-      .post(URL_GRAPHQL_API_TEST_INTEGRATION, { query: DELETE_USER_REQUEST });
+    const { data: createdFavoriteUser } = await axios
+      .post(URL_GRAPHQL_API_TEST_INTEGRATION, { query: FOLLOW_USER_REQUEST });
 
-    expect(deletedUser).toMatchSnapshot();
+    expect(createdFavoriteUser).toMatchSnapshot();
   });
 });

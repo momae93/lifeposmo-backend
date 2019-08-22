@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[INTEGRATION][USERS] : Create user should success create user and get all fields when calling * createIser * 1`] = `
+exports[`[INTEGRATION][USERS] : Create user should success create user and get all fields when calling * createUser * 1`] = `
 Object {
   "data": Object {
     "createUser": Object {

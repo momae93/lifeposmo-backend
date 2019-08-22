@@ -8,7 +8,7 @@ const { URL_GRAPHQL_API_TEST_INTEGRATION } = require('../../constants');
 const buildMockUserRepository = require('../../../../src/modules/users/__mocks__/repository');
 const buildMockPostRepository = require('../../../../src/modules/posts/__mocks__/repository');
 
-describe('[INTEGRATION][USERS] : Delete user', () => {
+describe('[INTEGRATION][USERS] : Unfollow user', () => {
   let server = null;
   let mockDatabase = null;
 
@@ -16,17 +16,13 @@ describe('[INTEGRATION][USERS] : Delete user', () => {
     // LOCAL MOCKS
     const mockDbServices = {};
     const mockUserRepository = buildMockUserRepository({
-      deleteUser: (id) => {
-        mockDatabase.users.filter((user) => user.id !== id);
+      deleteFavoriteUser: (id) => {
+        mockDatabase.favoriteUsers.filter((favoriteUser) => favoriteUser.id !== id);
 
         return true;
       },
     });
-    const mockPostRepository = buildMockPostRepository({
-      getPostsByIdAuthor: (idAuthor) => (mockDatabase
-        .posts
-        .filter((posts) => posts.idAuthor === idAuthor)),
-    });
+    const mockPostRepository = buildMockPostRepository();
     const mockBuildUserRepository = () => (mockUserRepository);
     const mockBuildPostRepository = () => (mockPostRepository);
     const userServices = buildUserServices(mockDbServices, mockBuildUserRepository);
@@ -52,19 +48,19 @@ describe('[INTEGRATION][USERS] : Delete user', () => {
     await server.stop(done);
   });
 
-  it('should success delete user when calling * deleteUser *', async () => {
+  it('should success unfollow user when calling * unfollowUser *', async () => {
     // QUERY
     const idToDelete = 1;
-    const DELETE_USER_REQUEST = `
+    const UNFOLLOW_USER_REQUEST = `
       mutation {
-        deleteUser(
-          id: ${idToDelete},
+        unfollowUser(
+          idFavorite: ${idToDelete},
         )
       }
     `;
 
     const { data: deletedUser } = await axios
-      .post(URL_GRAPHQL_API_TEST_INTEGRATION, { query: DELETE_USER_REQUEST });
+      .post(URL_GRAPHQL_API_TEST_INTEGRATION, { query: UNFOLLOW_USER_REQUEST });
 
     expect(deletedUser).toMatchSnapshot();
   });
