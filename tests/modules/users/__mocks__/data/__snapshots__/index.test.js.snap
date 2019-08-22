@@ -8,8 +8,8 @@ Object {
     "favoriteUsers": Array [
       Object {
         "id": 1,
+        "idFavoriteUser": 2,
         "idUser": 1,
-        "idUserFavorite": 2,
       },
     ],
     "users": Array [

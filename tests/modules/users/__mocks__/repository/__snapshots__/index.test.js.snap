@@ -7,6 +7,8 @@ Object {
   "deleteFavoriteUser": [MockFunction],
   "deleteUser": [MockFunction],
   "getAllUsers": [MockFunction],
+  "getFollowersByIdUser": [MockFunction],
+  "getFollowingByIdUser": [MockFunction],
   "getUserById": [MockFunction],
 }
 `;

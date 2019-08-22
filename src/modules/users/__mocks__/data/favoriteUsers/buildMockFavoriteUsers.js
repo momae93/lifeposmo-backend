@@ -3,7 +3,7 @@ const buildMockFavoriteUsers = () => (
     {
       id: 1,
       idUser: 1,
-      idUserFavorite: 2,
+      idFavoriteUser: 2,
     },
   ]
 );

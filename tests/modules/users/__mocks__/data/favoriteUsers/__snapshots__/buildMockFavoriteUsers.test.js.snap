@@ -4,8 +4,8 @@ exports[`[MODULES][USERS][__MOCKS__][DATAS] : mock favorite Users should match s
 Array [
   Object {
     "id": 1,
+    "idFavoriteUser": 2,
     "idUser": 1,
-    "idUserFavorite": 2,
   },
 ]
 `;

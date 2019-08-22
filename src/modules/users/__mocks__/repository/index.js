@@ -4,6 +4,8 @@ const buildMockUserRepository = (overridenCallbacks = {}) => {
   const {
     getAllUsers: overridenGetAllUsers = () => {},
     getUserById: overridenGetUserById = () => {},
+    getFollowersByIdUser: overridenGetFollowersByIdUser = () => {},
+    getFollowingByIdUser: overridenGetFollowingByIdUser = () => {},
     deleteUser: overridenDeleteUser = () => {},
     createUser: overridenCreateUser = () => {},
     createFavoriteUser: overridenCreateFavoriteUser = () => {},
@@ -13,6 +15,8 @@ const buildMockUserRepository = (overridenCallbacks = {}) => {
   const mockUserRepository = {
     getAllUsers: buildMockFunction(overridenGetAllUsers),
     getUserById: buildMockFunction(overridenGetUserById),
+    getFollowersByIdUser: buildMockFunction(overridenGetFollowersByIdUser),
+    getFollowingByIdUser: buildMockFunction(overridenGetFollowingByIdUser),
     deleteUser: buildMockFunction(overridenDeleteUser),
     createUser: buildMockFunction(overridenCreateUser),
     createFavoriteUser: buildMockFunction(overridenCreateFavoriteUser),
