@@ -7,6 +7,8 @@ Object {
   "deleteFavoriteUser": [Function],
   "deleteUser": [Function],
   "getAllUsers": [Function],
+  "getFollowersByIdUser": [Function],
+  "getFollowingByIdUser": [Function],
   "getUserById": [Function],
 }
 `;

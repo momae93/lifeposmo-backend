@@ -11,10 +11,12 @@ describe('[MODULES][USERS][REPOSITORY] : user repository', () => {
     // EXPECTED
     const expectedRepository = {
       createUser: expect.any(Function),
+      createFavoriteUser: expect.any(Function),
       deleteUser: expect.any(Function),
       getAllUsers: expect.any(Function),
       getUserById: expect.any(Function),
-      createFavoriteUser: expect.any(Function),
+      getFollowersByIdUser: expect.any(Function),
+      getFollowingByIdUser: expect.any(Function),
       deleteFavoriteUser: expect.any(Function),
     };
 
