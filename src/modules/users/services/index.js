@@ -5,6 +5,8 @@ const getAllUsers = require('./getAllUsers');
 const getUserById = require('./getUserById');
 const createUser = require('./createUser');
 const deleteUser = require('./deleteUser');
+const followUser = require('./followUser');
+const unfollowUser = require('./unfollowUser');
 
 /**
  * DOMAIN level - Build user services with dependency injection
@@ -20,6 +22,8 @@ function buildServices(
     getUserById: getUserById(buildUserRepository),
     createUser: createUser(buildUserRepository),
     deleteUser: deleteUser(buildUserRepository),
+    followUser: followUser(buildUserRepository),
+    unfollowUser: unfollowUser(buildUserRepository),
   };
 
   return services;

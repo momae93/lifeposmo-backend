@@ -6,6 +6,8 @@ Array [
     "Mutation": Object {
       "createUser": [Function],
       "deleteUser": [Function],
+      "followUser": [Function],
+      "unfollowUser": [Function],
     },
     "Query": Object {
       "user": [Function],

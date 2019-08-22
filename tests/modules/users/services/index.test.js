@@ -20,8 +20,11 @@ describe('[MODULES][USERS][SERVICES] : user services', () => {
       deleteUser: expect.any(Function),
       getAllUsers: expect.any(Function),
       getUserById: expect.any(Function),
+      followUser: expect.any(Function),
+      unfollowUser: expect.any(Function),
     };
 
+    expect(userServices).toMatchSnapshot();
     expect(userServices).toMatchObject(expecteduserServices);
   });
 });

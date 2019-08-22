@@ -1,9 +1,9 @@
-const createFavoriteUser = require('../../../../../src/modules/users/services/createFavoriteUser');
+const followUser = require('../../../../../src/modules/users/services/followUser');
 const buildMockUserRepository = require('../../../../../src/modules/users/__mocks__/repository');
 const basicFavoriteUser = require('../../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
 
-describe('[MODULES][USERS][SERVICES] : create favorite user', () => {
-  it('should success create new favorite user', async () => {
+describe('[MODULES][USERS][SERVICES] : follow favorite user', () => {
+  it('should success follow favorite user', async () => {
     // LOCAL MOCKS
     const mockNewFavoriteUserId = 1;
     const mockCreateFavoriteUser = (favoriteUserToCreateEntity) => ({
@@ -17,7 +17,7 @@ describe('[MODULES][USERS][SERVICES] : create favorite user', () => {
     const favoriteUserDomainEntity = basicFavoriteUser;
 
     // FUNCTION TESTED
-    const userCreated = createFavoriteUser(mockBuildUserRepository)(favoriteUserDomainEntity);
+    const userCreated = followUser(mockBuildUserRepository)(favoriteUserDomainEntity);
 
     // EXPECTED
     const expectedUserCreated = {

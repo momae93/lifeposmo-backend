@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[MODULES][USERS][SERVICES] : user services should build user services 1`] = `
+Object {
+  "createUser": [Function],
+  "deleteUser": [Function],
+  "followUser": [Function],
+  "getAllUsers": [Function],
+  "getUserById": [Function],
+  "unfollowUser": [Function],
+}
+`;

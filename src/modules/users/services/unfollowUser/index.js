@@ -1,10 +1,10 @@
 const defaultBuildUserRepository = require('../../repository');
 
 /**
- * DOMAIN level - Delete favorite user by id
+ * DOMAIN level - Unfollow user
  * @param {*} userServices
  */
-const deleteFavoriteUser = (
+const unfollowUser = (
   buildUserRepository = defaultBuildUserRepository,
 ) => (id) => {
   const repository = buildUserRepository();
@@ -12,4 +12,4 @@ const deleteFavoriteUser = (
   return repository.deleteFavoriteUser(id);
 };
 
-module.exports = deleteFavoriteUser;
+module.exports = unfollowUser;

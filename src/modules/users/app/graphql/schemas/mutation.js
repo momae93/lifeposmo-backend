@@ -15,6 +15,15 @@ const mutationType = gql`
     deleteUser(
       id: ID!
     ): Boolean!
+
+    followUser(
+      idUser: ID!,
+      idFavoriteUser: ID!,
+    ): User!
+
+    unfollowUser(
+      idFavorite: ID!
+    ): Boolean!
   }
 `;
 

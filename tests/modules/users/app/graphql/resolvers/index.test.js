@@ -2,7 +2,8 @@ const buildResolvers = require('../../../../../../src/modules/users/app/graphql/
 const buildMockUserServices = require('../../../../../../src/modules/users/__mocks__/services/');
 const buildMockPostServices = require('../../../../../../src/modules/posts/__mocks__/services/');
 const buildMockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
-const mockBasicUser = require('../../../../../../src/modules/users/__mocks__/data/users/basicUser');
+const basicUser = require('../../../../../../src/modules/users/__mocks__/data/users/basicUser');
+const basicFavoriteUser = require('../../../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
 const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
 
 describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : buildResolvers', () => {
@@ -108,7 +109,7 @@ describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : Mutation resolvers', () =
     const mockPostServices = buildMockPostServices();
     const mockUserServices = buildMockUserServices({ createUser: mockCreateUser });
     const userResolvers = buildResolvers(mockUserServices, mockPostServices);
-    const queryArguments = mockBasicUser;
+    const queryArguments = basicUser;
 
     // FUNCTION TESTED
     const userCreated = userResolvers.Mutation.createUser(null, queryArguments);
@@ -116,7 +117,7 @@ describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : Mutation resolvers', () =
     // EXPECTED
     const expectedUserCreated = {
       id: mockNewUserId,
-      ...mockBasicUser,
+      ...basicUser,
     };
 
     const expectedUserCreatedSchema = {
@@ -131,7 +132,7 @@ describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : Mutation resolvers', () =
     };
 
     expect(mockUserServices.createUser).toHaveBeenCalledTimes(1);
-    expect(mockUserServices.createUser).toHaveBeenCalledWith(mockBasicUser);
+    expect(mockUserServices.createUser).toHaveBeenCalledWith(basicUser);
     expect(userCreated).toMatchObject(expectedUserCreatedSchema);
     expect(userCreated).toMatchObject(expectedUserCreated);
   });
@@ -163,6 +164,68 @@ describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : Mutation resolvers', () =
     expect(mockUserServices.deleteUser).toHaveBeenCalledTimes(1);
     expect(mockUserServices.deleteUser).toHaveBeenCalledWith(idUserToBeDeleted);
     expect(isUserDeleted).toBe(expectedUserDeleted);
+  });
+
+  it('should success call * followUser *', () => {
+    // LOCAL MOCKS
+    const mockNewFavoriteUserId = 1;
+    const mockCreateFavoriteUser = (favoriteUserToCreateEntity) => ({
+      id: mockNewFavoriteUserId,
+      ...favoriteUserToCreateEntity,
+    });
+    const mockPostServices = buildMockPostServices();
+    const mockUserServices = buildMockUserServices({ followUser: mockCreateFavoriteUser });
+    const userResolvers = buildResolvers(mockUserServices, mockPostServices);
+    const queryArguments = basicFavoriteUser;
+
+    // FUNCTION TESTED
+    const favoriteUserCreated = userResolvers.Mutation.followUser(null, queryArguments);
+
+    // EXPECTED
+    const expectedFavoriteUserCreated = {
+      id: mockNewFavoriteUserId,
+      ...basicFavoriteUser,
+    };
+
+    const expectedFavoriteUserCreatedSchema = {
+      id: expect.any(Number),
+      idUser: expect.any(Number),
+      idFavoriteUser: expect.any(Number),
+    };
+
+    expect(mockUserServices.followUser).toHaveBeenCalledTimes(1);
+    expect(mockUserServices.followUser).toHaveBeenCalledWith(basicFavoriteUser);
+    expect(favoriteUserCreated).toMatchObject(expectedFavoriteUserCreatedSchema);
+    expect(favoriteUserCreated).toMatchObject(expectedFavoriteUserCreated);
+  });
+
+  it('should success call * unfollowuser *', () => {
+    // LOCAL MOCKS
+    const unfollowSucessed = true;
+    const idFavoriteToBeDeleted = 1;
+    const mockUnfollowUser = (idFavorite) => {
+      // Silly mocking of the behavior to ensure an idUser is passed to test
+      if (idFavorite) {
+        return unfollowSucessed;
+      }
+      return false;
+    };
+    const mockPostServices = buildMockPostServices();
+    const mockUserServices = buildMockUserServices({ unfollowUser: mockUnfollowUser });
+    const userResolvers = buildResolvers(mockUserServices, mockPostServices);
+    const queryArguments = {
+      id: idFavoriteToBeDeleted,
+    };
+
+    // FUNCTION TESTED
+    const isFavoriteUserDeleted = userResolvers.Mutation.unfollowUser(null, queryArguments);
+
+    // EXPECTED
+    const expectedFavoriteUserDeleted = true;
+
+    expect(mockUserServices.unfollowUser).toHaveBeenCalledTimes(1);
+    expect(mockUserServices.unfollowUser).toHaveBeenCalledWith(idFavoriteToBeDeleted);
+    expect(isFavoriteUserDeleted).toBe(expectedFavoriteUserDeleted);
   });
 });
 

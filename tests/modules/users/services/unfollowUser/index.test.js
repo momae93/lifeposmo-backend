@@ -1,8 +1,8 @@
-const deleteFavoriteUser = require('../../../../../src/modules/users/services/deleteFavoriteUser');
+const unfollowUser = require('../../../../../src/modules/users/services/unfollowUser');
 const buildMockUserRepository = require('../../../../../src/modules/users/__mocks__/repository');
 
-describe('[MODULES][USERS][SERVICES] : delete favorite user', () => {
-  it('should success delete new favorite user', async () => {
+describe('[MODULES][USERS][SERVICES] : unfollow user', () => {
+  it('should success unfollow user', async () => {
     // LOCAL MOCKS
     const deleteSucessed = true;
     const idUFavoriteUser = 1;
@@ -19,7 +19,7 @@ describe('[MODULES][USERS][SERVICES] : delete favorite user', () => {
     const mockBuildUserRepository = () => (mockUserRepository);
 
     // FUNCTION TESTED
-    const isFavoriteUserDeleted = deleteFavoriteUser(mockBuildUserRepository)(idUFavoriteUser);
+    const isFavoriteUserDeleted = unfollowUser(mockBuildUserRepository)(idUFavoriteUser);
 
     // EXPECTED
     const expectedFavoriteUserDeleted = true;

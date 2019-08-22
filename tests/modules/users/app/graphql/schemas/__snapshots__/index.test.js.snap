@@ -489,6 +489,108 @@ Object {
             },
           },
         },
+        Object {
+          "arguments": Array [
+            Object {
+              "defaultValue": undefined,
+              "description": undefined,
+              "directives": Array [],
+              "kind": "InputValueDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "idUser",
+              },
+              "type": Object {
+                "kind": "NonNullType",
+                "type": Object {
+                  "kind": "NamedType",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "ID",
+                  },
+                },
+              },
+            },
+            Object {
+              "defaultValue": undefined,
+              "description": undefined,
+              "directives": Array [],
+              "kind": "InputValueDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "idFavoriteUser",
+              },
+              "type": Object {
+                "kind": "NonNullType",
+                "type": Object {
+                  "kind": "NamedType",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "ID",
+                  },
+                },
+              },
+            },
+          ],
+          "description": undefined,
+          "directives": Array [],
+          "kind": "FieldDefinition",
+          "name": Object {
+            "kind": "Name",
+            "value": "followUser",
+          },
+          "type": Object {
+            "kind": "NonNullType",
+            "type": Object {
+              "kind": "NamedType",
+              "name": Object {
+                "kind": "Name",
+                "value": "User",
+              },
+            },
+          },
+        },
+        Object {
+          "arguments": Array [
+            Object {
+              "defaultValue": undefined,
+              "description": undefined,
+              "directives": Array [],
+              "kind": "InputValueDefinition",
+              "name": Object {
+                "kind": "Name",
+                "value": "idFavorite",
+              },
+              "type": Object {
+                "kind": "NonNullType",
+                "type": Object {
+                  "kind": "NamedType",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "ID",
+                  },
+                },
+              },
+            },
+          ],
+          "description": undefined,
+          "directives": Array [],
+          "kind": "FieldDefinition",
+          "name": Object {
+            "kind": "Name",
+            "value": "unfollowUser",
+          },
+          "type": Object {
+            "kind": "NonNullType",
+            "type": Object {
+              "kind": "NamedType",
+              "name": Object {
+                "kind": "Name",
+                "value": "Boolean",
+              },
+            },
+          },
+        },
       ],
       "interfaces": Array [],
       "kind": "ObjectTypeExtension",
@@ -500,7 +602,7 @@ Object {
   ],
   "kind": "Document",
   "loc": Object {
-    "end": 633,
+    "end": 766,
     "start": 0,
   },
 }

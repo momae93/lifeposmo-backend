@@ -15,10 +15,10 @@ function appToDomainEntity(favoriteUserAppEntity) {
 }
 
 /**
- * DOMAIN level - Create favorite user
+ * DOMAIN level - Follow an user
  * @param {*} userServices
  */
-const createFavoriteUser = (
+const followUser = (
   buildUserRepository = defaultBuildUserRepository,
 ) => (favoriteUserAppEntity) => {
   const repository = buildUserRepository();
@@ -27,4 +27,4 @@ const createFavoriteUser = (
   return repository.createFavoriteUser(favoriteUserDomainEntity);
 };
 
-module.exports = createFavoriteUser;
+module.exports = followUser;
