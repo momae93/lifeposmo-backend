@@ -34,7 +34,7 @@ describe('[MODULES][USERS][REPOSITORY]: delete favorite user from favorite user 
     // EXPECTED
     const deletedFavoriteUser = localDatabase
       .favoriteUsers
-      .find((user) => user.id === idFavorite);
+      .find((favoriteUser) => favoriteUser.id === idFavorite);
 
     expect(isDeleted).toBe(false);
     expect(deletedFavoriteUser).toBeUndefined();

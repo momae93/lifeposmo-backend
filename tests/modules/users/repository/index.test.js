@@ -14,8 +14,11 @@ describe('[MODULES][USERS][REPOSITORY] : user repository', () => {
       deleteUser: expect.any(Function),
       getAllUsers: expect.any(Function),
       getUserById: expect.any(Function),
+      createFavoriteUser: expect.any(Function),
+      deleteFavoriteUser: expect.any(Function),
     };
 
+    expect(userRepository).toMatchSnapshot();
     expect(userRepository).toMatchObject(expectedRepository);
   });
 });

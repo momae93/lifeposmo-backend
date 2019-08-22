@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[MODULES][USERS][REPOSITORY] : user repository should build user repository with no db client passed 1`] = `
+Object {
+  "createFavoriteUser": [Function],
+  "createUser": [Function],
+  "deleteFavoriteUser": [Function],
+  "deleteUser": [Function],
+  "getAllUsers": [Function],
+  "getUserById": [Function],
+}
+`;
