@@ -10,5 +10,6 @@ Object {
   "getFollowersByIdUser": [MockFunction],
   "getFollowingByIdUser": [MockFunction],
   "getUserById": [MockFunction],
+  "getUsersByIds": [MockFunction],
 }
 `;

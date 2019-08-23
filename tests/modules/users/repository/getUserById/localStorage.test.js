@@ -2,7 +2,7 @@ const getUserByIdLocalStorage = require('../../../../../src/modules/users/reposi
 const localDatabase = require('../../../../../src/modules/users/__mocks__/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : get user by id', () => {
-  it('should get all users from local storage', async () => {
+  it('should get an user given a user id from local storage', async () => {
     // LOCAL MOCKS
     const idUser = 1;
 

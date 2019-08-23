@@ -1,5 +1,6 @@
 const getAllUsers = require('./getAllUsers');
 const getUserById = require('./getUserById');
+const getUsersByIds = require('./getUsersByIds');
 const getFollowersByIdUser = require('./getFollowersByIdUser');
 const getFollowingByIdUser = require('./getFollowingByIdUser');
 const createUser = require('./createUser');
@@ -11,6 +12,7 @@ const buildRepository = (db) => {
   const repository = {
     getAllUsers: getAllUsers(db),
     getUserById: getUserById(db),
+    getUsersByIds: getUsersByIds(db),
     getFollowersByIdUser: getFollowersByIdUser(db),
     getFollowingByIdUser: getFollowingByIdUser(db),
     createUser: createUser(db),

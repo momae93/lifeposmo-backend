@@ -10,5 +10,6 @@ Object {
   "getFollowersByIdUser": [Function],
   "getFollowingByIdUser": [Function],
   "getUserById": [Function],
+  "getUsersByIds": [Function],
 }
 `;
