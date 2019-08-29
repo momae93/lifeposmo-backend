@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/bin/app",
-    "test": "NODE_ENV=test node_modules/.bin/jest --passWithNoTests --runInBand --coverage --detectOpenHandles",
-    "test:watch": "NODE_ENV=test node_modules/.bin/jest --passWithNoTests --verbose --runInBand --coverage --watch",
+    "test": "NODE_ENV=test node_modules/.bin/jest --config=./tests/configs/jest.config.js --passWithNoTests --runInBand --coverage --detectOpenHandles",
+    "test:unit": "NODE_ENV=test node_modules/.bin/jest --config=./tests/configs/jest.config.unit.js --passWithNoTests --runInBand --coverage --detectOpenHandles",
+    "test:integration": "NODE_ENV=test node_modules/.bin/jest --config=./tests/configs/jest.config.integration.js --passWithNoTests --runInBand --coverage --detectOpenHandles",
     "test:update": "NODE_ENV=test node_modules/.bin/jest -u --runInBand",
     "lint": "./node_modules/.bin/eslint src/",
     "lint:fix": "./node_modules/.bin/eslint src/ --fix"
