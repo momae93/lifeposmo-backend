@@ -1,4 +1,4 @@
-const querySchemas = require('../../../../../../../src/modules/posts/app/graphql/schemas/query');
+const querySchemas = require('@PostApp/graphql/schemas/query');
 
 describe('[MODULES][POSTS][APP][GRAPHQL - SCHEMAS] : query schemas', () => {
   it('should returns schema of queries', async () => {

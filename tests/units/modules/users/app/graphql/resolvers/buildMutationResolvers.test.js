@@ -1,5 +1,5 @@
-const buildMutationResolvers = require('../../../../../../../src/modules/users/app/graphql/resolvers/buildMutationResolvers');
-const buildMockUserServices = require('../../../../../../../src/modules/users/__mocks__/services/');
+const buildMockUserServices = require('@UserMocks/services');
+const buildMutationResolvers = require('@UserApp/graphql/resolvers/buildMutationResolvers');
 
 describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : buildMutationResolvers', () => {
   it('should build mutation resolvers', async () => {

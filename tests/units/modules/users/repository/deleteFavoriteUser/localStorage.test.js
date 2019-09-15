@@ -1,5 +1,5 @@
-const deleteFavoriteUserLocalStorage = require('../../../../../../src/modules/users/repository/deleteFavoriteUser/localStorage');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
+const deleteFavoriteUserLocalStorage = require('@UserRepository/deleteFavoriteUser/localStorage');
+const localDatabase = require('@UserMocks/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : delete favorite user from favorite user id', () => {
   it('should success delete an user from an user id from local storage', async () => {

@@ -1,6 +1,6 @@
-const createUser = require('../../../../../../src/modules/users/repository/createUser');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
-const basicUser = require('../../../../../../src/modules/users/__mocks__/data/users/basicUser');
+const createUser = require('@UserRepository/createUser');
+const localDatabase = require('@UserMocks/data/localDatabase');
+const basicUser = require('@UserMocks/data/users/basicUser');
 
 describe('[MODULES][USERS][REPOSITORY] : create user', () => {
   it('should success create an user', async () => {

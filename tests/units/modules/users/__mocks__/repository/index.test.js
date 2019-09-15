@@ -1,4 +1,4 @@
-const buildMockRepository = require('../../../../../../src/modules/users/__mocks__/repository');
+const buildMockRepository = require('@UserMocks/repository');
 
 describe('[MODULES][USERS][__MOCKS__][REPOSITORY] : mockRepository', () => {
   it('should returns an object containing mocked repository', async () => {

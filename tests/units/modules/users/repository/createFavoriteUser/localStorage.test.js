@@ -1,6 +1,6 @@
-const createFavoriteUserLocalStorage = require('../../../../../../src/modules/users/repository/createFavoriteUser/localStorage');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
-const basicFavoriteUser = require('../../../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
+const createFavoriteUserLocalStorage = require('@UserRepository/createFavoriteUser/localStorage');
+const localDatabase = require('@UserMocks/data/localDatabase');
+const basicFavoriteUser = require('@UserMocks/data/favoriteUsers/basicFavoriteUser');
 
 describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : create favorite user', () => {
   it('should success create a favorite user', async () => {

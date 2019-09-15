@@ -1,4 +1,4 @@
-const buildUserRepository = require('../../../../../src/modules/users/repository/');
+const buildUserRepository = require('@UserRepository');
 
 describe('[MODULES][USERS][REPOSITORY] : user repository', () => {
   it('should build user repository with no db client passed', async () => {

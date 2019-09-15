@@ -1,5 +1,5 @@
-const getPostById = require('../../../../../../src/modules/posts/repository/getPostById');
-const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
+const getPostById = require('@PostRepository/getPostById');
+const mockPosts = require('@PostMocks/data/posts/posts');
 
 describe('[MODULES][POSTS][REPOSITORY] : get by post id', () => {
   it('should get a pots given a post id', async () => {

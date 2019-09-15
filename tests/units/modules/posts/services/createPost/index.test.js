@@ -1,6 +1,6 @@
-const createPost = require('../../../../../../src/modules/posts/services/createPost');
-const buildMockPostRepository = require('../../../../../../src/modules/posts/__mocks__/repository');
-const mockBasicPost = require('../../../../../../src/modules/posts/__mocks__/data/posts/basicPost');
+const createPost = require('@PostService/createPost');
+const buildMockPostRepository = require('@PostMocks/repository');
+const mockBasicPost = require('@PostMocks/data/posts/basicPost');
 
 describe('[MODULES][POSTS][SERVICES] : create post', () => {
   it('should success create new post', async () => {

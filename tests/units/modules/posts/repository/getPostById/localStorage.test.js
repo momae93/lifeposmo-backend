@@ -1,5 +1,5 @@
-const getUserByIdLocalStorage = require('../../../../../../src/modules/posts/repository/getPostById/localStorage');
-const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
+const getUserByIdLocalStorage = require('@PostRepository/getPostById/localStorage');
+const mockPosts = require('@PostMocks/data/posts/posts');
 
 describe('[MODULES][POSTS][REPOSITORY][LOCAL STORAGE] : get post by id', () => {
   it('should get all posts from local storage', async () => {

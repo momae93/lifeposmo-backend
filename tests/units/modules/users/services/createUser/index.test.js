@@ -1,6 +1,6 @@
-const createUser = require('../../../../../../src/modules/users/services/createUser');
-const buildMockUserRepository = require('../../../../../../src/modules/users/__mocks__/repository');
-const mockBasicUser = require('../../../../../../src/modules/users/__mocks__/data/users/basicUser');
+const createUser = require('@UserService/createUser');
+const buildMockUserRepository = require('@UserMocks/repository');
+const mockBasicUser = require('@UserMocks/data/users/basicUser');
 
 describe('[MODULES][USERS][SERVICES] : create user', () => {
   it('should success create new user', async () => {

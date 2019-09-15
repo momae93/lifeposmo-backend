@@ -1,4 +1,4 @@
-const defaultBuildPostRepository = require('../../repository');
+const defaultBuildPostRepository = require('@PostRepository');
 
 /**
  * DOMAIN level - Gets all posts from repository

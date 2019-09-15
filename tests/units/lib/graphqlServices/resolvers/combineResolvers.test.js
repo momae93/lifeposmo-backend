@@ -1,4 +1,4 @@
-const combineResolvers = require('../../../../../src/lib/graphqlServices/resolvers/combineResolvers');
+const combineResolvers = require('@GraphqlService/resolvers/combineResolvers');
 
 describe('[LIB][GRAPHQL][RESOLVERS] : combineResolvers', () => {
   it('should match snapshot lib graphql combineResolvers', async () => {

@@ -1,6 +1,6 @@
-const createPostLocalStorage = require('../../../../../../src/modules/posts/repository/createPost/localStorage');
-const localDatabase = require('../../../../../../src/modules/posts/__mocks__/data/localDatabase');
-const basicPost = require('../../../../../../src/modules/posts/__mocks__/data/posts/basicPost');
+const createPostLocalStorage = require('@PostRepository/createPost/localStorage');
+const localDatabase = require('@PostMocks/data/localDatabase');
+const basicPost = require('@PostMocks/data/posts/basicPost');
 
 describe('[MODULES][POSTS][REPOSITORY][LOCAL STORAGE] : create post from user id', () => {
   it('should success create an post from local storagez', async () => {

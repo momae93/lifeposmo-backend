@@ -1,6 +1,6 @@
-const createFavoriteUser = require('../../../../../../src/modules/users/repository/createFavoriteUser');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
-const basicFavoriteUser = require('../../../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
+const createFavoriteUser = require('@UserRepository/createFavoriteUser');
+const localDatabase = require('@UserMocks/data/localDatabase');
+const basicFavoriteUser = require('@UserMocks/data/favoriteUsers/basicFavoriteUser');
 
 describe('[MODULES][USERS][REPOSITORY] : create favorite user', () => {
   it('should success create a favorite user', async () => {

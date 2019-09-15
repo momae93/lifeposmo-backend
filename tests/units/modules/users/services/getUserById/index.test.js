@@ -1,6 +1,6 @@
-const getUserById = require('../../../../../../src/modules/users/services/getUserById');
-const buildMockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
-const buildMockUserRepository = require('../../../../../../src/modules/users/__mocks__/repository');
+const getUserById = require('@UserService/getUserById');
+const buildMockUsers = require('@UserMocks/data/users/buildMockUsers');
+const buildMockUserRepository = require('@UserMocks/repository');
 
 describe('[MODULES][USERS][SERVICES] : get user by id user', () => {
   it('should success returns a user from an id', async () => {

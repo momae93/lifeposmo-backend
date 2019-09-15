@@ -1,4 +1,4 @@
-const defaultPostUserRepository = require('../../repository');
+const defaultPostUserRepository = require('@PostRepository');
 
 /**
   * DOMAIN level - Gets post list that has been written by the given author id

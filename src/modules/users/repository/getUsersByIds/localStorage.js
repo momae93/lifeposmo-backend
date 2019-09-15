@@ -1,4 +1,4 @@
-const { localDatabase } = require('../../__mocks__/data/');
+const { localDatabase } = require('@UserMocks/data/');
 
 function getUsersByIds(idUsers = []) {
   const searchedUsers = localDatabase

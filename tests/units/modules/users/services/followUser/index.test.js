@@ -1,6 +1,6 @@
-const followUser = require('../../../../../../src/modules/users/services/followUser');
-const buildMockUserRepository = require('../../../../../../src/modules/users/__mocks__/repository');
-const basicFavoriteUser = require('../../../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
+const followUser = require('@UserService/followUser');
+const buildMockUserRepository = require('@UserMocks/repository');
+const basicFavoriteUser = require('@UserMocks/data/favoriteUsers/basicFavoriteUser');
 
 describe('[MODULES][USERS][SERVICES] : follow favorite user', () => {
   it('should success follow favorite user', async () => {

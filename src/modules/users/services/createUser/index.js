@@ -1,4 +1,4 @@
-const defaultBuildUserRepository = require('../../repository');
+const defaultBuildUserRepository = require('@UserRepository');
 
 function appToDomainEntity(userAppEntity) {
   const {

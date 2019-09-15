@@ -1,5 +1,5 @@
-const getPostsByIdAuthorLocalStorage = require('../../../../../../src/modules/posts/repository/getPostsByIdAuthor/localStorage');
-const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
+const getPostsByIdAuthorLocalStorage = require('@PostRepository/getPostsByIdAuthor/localStorage');
+const mockPosts = require('@PostMocks/data/posts/posts');
 
 describe('[MODULES][POSTS][REPOSITORY][LOCAL STORAGE] : get posts written written by id author', () => {
   it('should get posts written written from local storage', async () => {

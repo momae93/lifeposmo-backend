@@ -1,5 +1,5 @@
-const buildQueryResolvers = require('../../../../../../../src/modules/users/app/graphql/resolvers/buildQueryResolvers');
-const buildMockUserServices = require('../../../../../../../src/modules/users/__mocks__/services/');
+const buildMockUserServices = require('@UserMocks/services');
+const buildQueryResolvers = require('@UserApp/graphql/resolvers/buildQueryResolvers');
 
 describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : buildQueryResolvers', () => {
   it('should build query resolvers', async () => {

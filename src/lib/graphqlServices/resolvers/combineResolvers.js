@@ -1,6 +1,6 @@
 const customScalarResolvers = require('./customScalarResolvers');
-const { buildResolvers: buildUserResolvers } = require('../../../modules/users');
-const { buildResolvers: buildPostResolvers } = require('../../../modules/posts');
+const { buildResolvers: buildUserResolvers } = require('@UserModule');
+const { buildResolvers: buildPostResolvers } = require('@PostModule');
 
 /**
  * Combines all modules' resolvers

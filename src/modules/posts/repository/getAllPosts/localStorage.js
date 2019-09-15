@@ -1,4 +1,4 @@
-const { localDatabase } = require('../../__mocks__/data/');
+const { localDatabase } = require('@PostMocks/data/');
 
 function getAllPosts() {
   return localDatabase.posts;

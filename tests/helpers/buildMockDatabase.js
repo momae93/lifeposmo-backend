@@ -1,6 +1,6 @@
-const buildMockUsers = require('../../src/modules/users/__mocks__/data/users/buildMockUsers');
-const buildMockFavoriteUsers = require('../../src/modules/users/__mocks__/data/favoriteUsers/buildMockFavoriteUsers');
-const buildMockPosts = require('../../src/modules/posts/__mocks__/data/posts/buildMockPosts');
+const buildMockUsers = require('@UserMocks/data/users/buildMockUsers');
+const buildMockFavoriteUsers = require('@UserMocks/data/favoriteUsers/buildMockFavoriteUsers');
+const buildMockPosts = require('@PostMocks/data/posts/buildMockPosts');
 
 function generateMockDatabase() {
   const mockUsers = buildMockUsers();

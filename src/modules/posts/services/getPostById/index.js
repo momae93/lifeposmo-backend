@@ -1,4 +1,4 @@
-const defaultPostUserRepository = require('../../repository');
+const defaultPostUserRepository = require('@PostRepository');
 
 /**
   * DOMAIN level - Gets single post by id

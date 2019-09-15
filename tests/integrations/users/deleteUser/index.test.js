@@ -1,12 +1,12 @@
 const axios = require('axios');
 
+const { buildGraphqlServer } = require('@Bin/servers/');
+const buildMockUserRepository = require('@UserMocks/repository');
+const buildMockPostRepository = require('@PostMocks/repository');
 const { buildMockDatabase } = require('../../../helpers/');
-const { buildGraphqlServer } = require('../../../../src/bin/servers/index');
-const { buildServices: buildUserServices } = require('../../../../src/modules/users');
-const { buildServices: buildPostServices } = require('../../../../src/modules/posts');
+const { buildServices: buildUserServices } = require('@UserModule/');
+const { buildServices: buildPostServices } = require('@PostModule/');
 const { URL_GRAPHQL_API_TEST_INTEGRATION } = require('../../constants');
-const buildMockUserRepository = require('../../../../src/modules/users/__mocks__/repository');
-const buildMockPostRepository = require('../../../../src/modules/posts/__mocks__/repository');
 
 describe('[INTEGRATION][USERS] : Delete user', () => {
   let server = null;

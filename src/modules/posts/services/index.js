@@ -1,5 +1,5 @@
-const defaultDbServices = require('../../../lib/dbServices');
-const defaultBuildPostRepository = require('../repository/');
+const defaultDbServices = require('@DbService');
+const defaultBuildPostRepository = require('@PostRepository');
 
 const getAllPosts = require('./getAllPosts');
 const getPostById = require('./getPostById');

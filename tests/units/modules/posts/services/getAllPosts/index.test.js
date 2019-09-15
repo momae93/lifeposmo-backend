@@ -1,6 +1,6 @@
-const getAllPosts = require('../../../../../../src/modules/posts/services/getAllPosts');
-const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
-const buildMockPostRepository = require('../../../../../../src/modules/posts/__mocks__/repository');
+const getAllPosts = require('@PostService/getAllPosts');
+const mockPosts = require('@PostMocks/data/posts/posts');
+const buildMockPostRepository = require('@PostMocks/repository');
 
 describe('[MODULES][POSTS][SERVICES] : get all posts', () => {
   it('should success get all posts', async () => {

@@ -1,5 +1,5 @@
-const getAllUsersLocalStorage = require('../../../../../../src/modules/users/repository/getAllUsers/localStorage');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
+const getAllUsersLocalStorage = require('@UserRepository/getAllUsers/localStorage');
+const localDatabase = require('@UserMocks/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : get all users', () => {
   it('should get all users from local storage', async () => {

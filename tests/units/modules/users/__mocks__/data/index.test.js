@@ -1,4 +1,4 @@
-const data = require('../../../../../../src/modules/users/__mocks__/data');
+const data = require('@UserMocks/data/');
 
 describe('[MODULES][USERS][__MOCKS__][DATAS] : mockData', () => {
   it('should returns an object containing mocked datas', async () => {

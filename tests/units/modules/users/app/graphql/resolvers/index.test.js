@@ -1,10 +1,10 @@
-const buildResolvers = require('../../../../../../../src/modules/users/app/graphql/resolvers/');
-const buildMockUserServices = require('../../../../../../../src/modules/users/__mocks__/services/');
-const buildMockPostServices = require('../../../../../../../src/modules/posts/__mocks__/services/');
-const buildMockUsers = require('../../../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
-const basicUser = require('../../../../../../../src/modules/users/__mocks__/data/users/basicUser');
-const basicFavoriteUser = require('../../../../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
-const mockPosts = require('../../../../../../../src/modules/posts/__mocks__/data/posts/posts');
+const buildMockUsers = require('@UserMocks/data/users/buildMockUsers');
+const basicUser = require('@UserMocks/data/users/basicUser');
+const basicFavoriteUser = require('@UserMocks/data/favoriteUsers/basicFavoriteUser');
+const buildMockUserServices = require('@UserMocks/services');
+const buildResolvers = require('@UserApp/graphql/resolvers/');
+const buildMockPostServices = require('@PostMocks/services/');
+const mockPosts = require('@PostMocks/data/posts/posts');
 
 describe('[MODULES][USERS][APP][GRAPHQL - RESOLVERS] : buildResolvers', () => {
   it('should build resolvers', async () => {

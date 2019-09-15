@@ -1,4 +1,4 @@
-const buildPostServices = require('../../../../../src/modules/posts/services/');
+const buildPostServices = require('@PostService/');
 
 describe('[MODULES][POSTS][SERVICES] : post services', () => {
   it('should build post services', async () => {

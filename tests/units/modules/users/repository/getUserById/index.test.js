@@ -1,5 +1,5 @@
-const getUserById = require('../../../../../../src/modules/users/repository/getUserById');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
+const getUserById = require('@UserRepository/getUserById');
+const localDatabase = require('@UserMocks/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY] : get user by id', () => {
   it('should get an user given a user id', async () => {

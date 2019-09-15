@@ -1,8 +1,10 @@
 const { gql } = require('apollo-server');
 
+const { schemas: userSchema } = require('@UserModule');
+const { schemas: postSchema } = require('@PostModule');
+
 const customScalarSchemas = require('./customScalarSchemas');
-const { schemas: userSchema } = require('../../../modules/users');
-const { schemas: postSchema } = require('../../../modules/posts');
+
 
 /**
  * Combines all modules' schemas

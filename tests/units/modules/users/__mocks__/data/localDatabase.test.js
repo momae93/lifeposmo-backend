@@ -1,4 +1,4 @@
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
+const localDatabase = require('@UserMocks/data/localDatabase');
 
 describe('[MODULES][USERS][__MOCKS__][DATAS] : mockData', () => {
   it('should returns an object containing mocked datas', async () => {

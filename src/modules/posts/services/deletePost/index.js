@@ -1,4 +1,4 @@
-const defaultBuildUserRepository = require('../../repository');
+const defaultBuildUserRepository = require('@UserRepository');
 
 /**
  * DOMAIN level - Deletes a post given a post id

@@ -1,13 +1,13 @@
 const axios = require('axios');
 
+const { buildGraphqlServer } = require('@Bin/servers/');
+const basicFavoriteUser = require('@UserMocks/data/favoriteUsers/basicFavoriteUser');
+const buildMockUserRepository = require('@UserMocks/repository');
+const buildMockPostRepository = require('@PostMocks/repository');
+const { buildServices: buildUserServices } = require('@UserModule/');
+const { buildServices: buildPostServices } = require('@PostModule/');
 const { buildMockDatabase } = require('../../../helpers/');
-const { buildGraphqlServer } = require('../../../../src/bin/servers/index');
-const { buildServices: buildUserServices } = require('../../../../src/modules/users');
-const { buildServices: buildPostServices } = require('../../../../src/modules/posts');
 const { URL_GRAPHQL_API_TEST_INTEGRATION } = require('../../constants');
-const basicFavoriteUser = require('../../../../src/modules/users/__mocks__/data/favoriteUsers/basicFavoriteUser');
-const buildMockUserRepository = require('../../../../src/modules/users/__mocks__/repository');
-const buildMockPostRepository = require('../../../../src/modules/posts/__mocks__/repository');
 
 describe('[INTEGRATION][USERS] : Follow user', () => {
   let server = null;

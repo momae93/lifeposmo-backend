@@ -1,4 +1,4 @@
-const UserSchema = require('../../../../../../../src/modules/users/app/graphql/schemas/User');
+const UserSchema = require('@UserApp/graphql/schemas/User');
 
 describe('[MODULES][USERS][APP][GRAPHQL - SCHEMAS] : User schemas', () => {
   it('should returns schema of User', async () => {

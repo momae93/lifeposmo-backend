@@ -1,4 +1,4 @@
-const buildUserServices = require('../../../../../src/modules/users/services/');
+const buildUserServices = require('@UserService');
 
 describe('[MODULES][USERS][SERVICES] : user services', () => {
   it('should build user services', async () => {

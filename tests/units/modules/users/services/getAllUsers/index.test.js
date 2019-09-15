@@ -1,6 +1,6 @@
-const getAllUsers = require('../../../../../../src/modules/users/services/getAllUsers');
-const buildMockUsers = require('../../../../../../src/modules/users/__mocks__/data/users/buildMockUsers');
-const buildMockUserRepository = require('../../../../../../src/modules/users/__mocks__/repository');
+const getAllUsers = require('@UserService/getAllUsers');
+const buildMockUsers = require('@UserMocks/data/users/buildMockUsers');
+const buildMockUserRepository = require('@UserMocks/repository');
 
 describe('[MODULES][USERS][SERVICES] : get all users', () => {
   it('should success get all users', async () => {

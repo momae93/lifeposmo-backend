@@ -1,12 +1,12 @@
 const {
   buildRepository: builUserRepository,
   buildServices: buildUserServices,
-} = require('../../modules/users');
+} = require('@UserModule');
 const {
   buildRepository: buildPostRepository,
   buildServices: buildPostServices,
-} = require('../../modules/posts');
-const dbServices = require('../../lib/dbServices');
+} = require('@PostModule');
+const dbServices = require('@DbService');
 
 /**
  * Build services through dependency injection

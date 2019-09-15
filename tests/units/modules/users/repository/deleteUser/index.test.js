@@ -1,5 +1,5 @@
-const deleteUser = require('../../../../../../src/modules/users/repository/deleteUser');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
+const deleteUser = require('@UserRepository/deleteUser');
+const localDatabase = require('@UserMocks/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY] : delete user from user id', () => {
   it('should success delete an user from an user id', async () => {

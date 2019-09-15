@@ -1,4 +1,4 @@
-const buildPostRepository = require('../../../../../src/modules/posts/repository/');
+const buildPostRepository = require('@PostRepository/');
 
 describe('[MODULES][POSTS][REPOSITORY] : post repository', () => {
   it('should build post repository with no db client passed', async () => {

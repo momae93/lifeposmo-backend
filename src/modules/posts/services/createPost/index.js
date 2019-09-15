@@ -1,4 +1,4 @@
-const defaultBuildPostRepository = require('../../repository');
+const defaultBuildPostRepository = require('@PostRepository');
 
 function appToDomainEntity(postAppEntity) {
   const {

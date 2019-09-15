@@ -1,5 +1,5 @@
-const getFollowingByIdUser = require('../../../../../../src/modules/users/repository/getFollowingByIdUser/');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
+const getFollowingByIdUser = require('@UserRepository/getFollowingByIdUser/');
+const localDatabase = require('@UserMocks/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY] : get user followings by id user', () => {
   it('should get all user followings', async () => {

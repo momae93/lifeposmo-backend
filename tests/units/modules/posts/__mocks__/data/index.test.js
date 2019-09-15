@@ -1,4 +1,4 @@
-const data = require('../../../../../../src/modules/posts/__mocks__/data');
+const data = require('@PostMocks/data');
 
 describe('[MODULES][POSTS][__MOCKS__][DATAS] : mockData', () => {
   it('should returns an object containing mocked datas', async () => {

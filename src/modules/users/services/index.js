@@ -1,5 +1,5 @@
-const defaultDbServices = require('../../../lib/dbServices');
-const defaultBuildUserRepository = require('../repository/');
+const defaultDbServices = require('@DbService');
+const defaultBuildUserRepository = require('@UserRepository/');
 
 const getAllUsers = require('./getAllUsers');
 const getUserById = require('./getUserById');

@@ -1,5 +1,5 @@
-const deleteUser = require('../../../../../../src/modules/users/services/deleteUser');
-const buildMockUserRepository = require('../../../../../../src/modules/users/__mocks__/repository');
+const deleteUser = require('@UserService/deleteUser');
+const buildMockUserRepository = require('@UserMocks/repository');
 
 describe('[MODULES][USERS][SERVICES] : delete user', () => {
   it('should success delete new user', async () => {

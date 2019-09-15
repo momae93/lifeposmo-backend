@@ -1,4 +1,4 @@
-const { constants } = require('../../../../src/lib/graphqlServices');
+const { constants } = require('@GraphqlService');
 
 describe('[LIB][GRAPHQL] : constants', () => {
   it('should match snapshot lib graphql constants', async () => {

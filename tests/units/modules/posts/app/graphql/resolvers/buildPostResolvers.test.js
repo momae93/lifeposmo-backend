@@ -1,6 +1,6 @@
-const buildPostResolvers = require('../../../../../../../src/modules/posts/app/graphql/resolvers/buildPostResolvers');
-const buildMockPostServices = require('../../../../../../../src/modules/posts/__mocks__/services');
-const buildMockUserServices = require('../../../../../../../src/modules/users/__mocks__/services');
+const buildMockUserServices = require('@UserMocks/services');
+const buildMockPostServices = require('@PostMocks/services');
+const buildPostResolvers = require('@PostApp/graphql/resolvers/buildPostResolvers');
 
 describe('[MODULES][POSTS][APP][GRAPHQL - RESOLVERS] : buildUserResolvers', () => {
   it('should build post resolvers', async () => {

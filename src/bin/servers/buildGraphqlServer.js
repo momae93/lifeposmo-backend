@@ -1,5 +1,5 @@
 const { ApolloServer } = require('apollo-server');
-const { combineResolvers, combineSchemas } = require('../../lib/graphqlServices');
+const { combineResolvers, combineSchemas } = require('@GraphqlService');
 
 function buildGraphqlServer(appServices) {
   const resolvers = combineResolvers(appServices);

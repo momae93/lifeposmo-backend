@@ -1,5 +1,5 @@
-const deletePost = require('../../../../../../src/modules/posts/services/deletePost');
-const buildMockUserRepository = require('../../../../../../src/modules/posts/__mocks__/repository');
+const deletePost = require('@PostService/deletePost');
+const buildMockUserRepository = require('@PostMocks/repository');
 
 describe('[MODULES][POSTS][SERVICES] : delete post', () => {
   it('should success delete new post', async () => {

@@ -1,5 +1,5 @@
-const unfollowUser = require('../../../../../../src/modules/users/services/unfollowUser');
-const buildMockUserRepository = require('../../../../../../src/modules/users/__mocks__/repository');
+const unfollowUser = require('@UserService/unfollowUser');
+const buildMockUserRepository = require('@UserMocks/repository');
 
 describe('[MODULES][USERS][SERVICES] : unfollow user', () => {
   it('should success unfollow user', async () => {

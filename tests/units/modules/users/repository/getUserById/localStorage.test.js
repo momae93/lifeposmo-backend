@@ -1,5 +1,5 @@
-const getUserByIdLocalStorage = require('../../../../../../src/modules/users/repository/getUserById/localStorage');
-const localDatabase = require('../../../../../../src/modules/users/__mocks__/data/localDatabase');
+const getUserByIdLocalStorage = require('@UserRepository/getUserById/localStorage');
+const localDatabase = require('@UserMocks/data/localDatabase');
 
 describe('[MODULES][USERS][REPOSITORY][LOCAL STORAGE] : get user by id', () => {
   it('should get an user given a user id from local storage', async () => {

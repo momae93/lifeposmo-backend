@@ -1,5 +1,5 @@
-const getPostsByIdAuthor = require('../../../../../../src/modules/posts/repository/getPostsByIdAuthor');
-const mockPosts = require('../../../../../../src/modules/posts/__mocks__/data/posts/posts');
+const getPostsByIdAuthor = require('@PostRepository/getPostsByIdAuthor');
+const mockPosts = require('@PostMocks/data/posts/posts');
 
 describe('[MODULES][POSTS][REPOSITORY] : get posts written written by id author', () => {
   it('should get a list of post written given a user id', async () => {

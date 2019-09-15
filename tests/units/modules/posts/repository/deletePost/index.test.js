@@ -1,5 +1,5 @@
-const deletePost = require('../../../../../../src/modules/posts/repository/deletePost');
-const localDatabase = require('../../../../../../src/modules/posts/__mocks__/data/localDatabase');
+const deletePost = require('@PostRepository/deletePost');
+const localDatabase = require('@PostMocks/data/localDatabase');
 
 describe('[MODULES][POSTS][REPOSITORY] : delete post from post id', () => {
   it('should success delete an post from an post id', async () => {
