@@ -3,6 +3,8 @@ const defaultBuildUserRepository = require('@UserRepository/');
 
 const getAllUsers = require('./getAllUsers');
 const getUserById = require('./getUserById');
+const getFollowersByIdUser = require('./getFollowersByIdUser');
+const getFollowingByIdUser = require('./getFollowingByIdUser');
 const createUser = require('./createUser');
 const deleteUser = require('./deleteUser');
 const followUser = require('./followUser');
@@ -20,6 +22,8 @@ function buildServices(
   const services = {
     getAllUsers: getAllUsers(buildUserRepository),
     getUserById: getUserById(buildUserRepository),
+    getFollowersByIdUser: getFollowersByIdUser(buildUserRepository),
+    getFollowingByIdUser: getFollowingByIdUser(buildUserRepository),
     createUser: createUser(buildUserRepository),
     deleteUser: deleteUser(buildUserRepository),
     followUser: followUser(buildUserRepository),

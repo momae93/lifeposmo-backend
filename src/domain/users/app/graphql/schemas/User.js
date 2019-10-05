@@ -11,6 +11,8 @@ const UserType = gql`
         birthdate: Date!
         isMale: Boolean!
         postsWritten: [Post!]
+        followers: [User!]
+        following: [User!]
     }
 `;
 

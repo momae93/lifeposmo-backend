@@ -9,6 +9,7 @@ function buildGraphqlServer(appServices) {
     typeDefs: schemas,
     resolvers,
     introspection: true,
+    playground: true,
   });
 
   server.start = () => {
