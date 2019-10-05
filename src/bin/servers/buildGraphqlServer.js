@@ -12,7 +12,7 @@ function buildGraphqlServer(appServices) {
 
   server.start = () => {
     server
-      .listen()
+      .listen(process.env.PORT || 5000)
       .then(() => {
         console.log('Server running on port 4000');
       });
