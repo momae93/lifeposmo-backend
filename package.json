@@ -4,7 +4,8 @@
   "description": "Life postmortem app back-end",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/bin/app",
+    "start": "node ./src/bin/app",
+    "start:dev": "node ./src/bin/app",
     "test": "NODE_ENV=test node_modules/.bin/jest --config=./tests/configs/jest.config.js --passWithNoTests --runInBand --coverage --detectOpenHandles",
     "test:unit": "NODE_ENV=test node_modules/.bin/jest --config=./tests/configs/jest.config.unit.js --passWithNoTests --runInBand --coverage --detectOpenHandles",
     "test:integration": "NODE_ENV=test node_modules/.bin/jest --config=./tests/configs/jest.config.integration.js --passWithNoTests --runInBand --coverage --detectOpenHandles",
