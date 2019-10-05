@@ -8,6 +8,7 @@ function buildGraphqlServer(appServices) {
   const server = new ApolloServer({
     typeDefs: schemas,
     resolvers,
+    introspection: true,
   });
 
   server.start = () => {
